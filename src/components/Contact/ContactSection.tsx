@@ -1,7 +1,8 @@
 import { FC } from 'react'
+import { ContactWrapper } from '@/components/Contact/ContactSection.styles'
 
 const ContactSection: FC = () => {
-  return <div></div>
+  return <ContactWrapper />
 }
 
 export default ContactSection

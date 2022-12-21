@@ -13,6 +13,8 @@ export const MainContentWrapper = styled.div`
 
   section {
     position: relative;
+
+    scroll-margin-top: 2000px;
   }
 
   .tag {
@@ -20,5 +22,13 @@ export const MainContentWrapper = styled.div`
     transform: translateX(-40px);
     font-family: ${({ theme }) => theme.fonts.code};
     color: #444;
+  }
+
+  .section-tags {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 400px;
+    }
   }
 `

@@ -1,25 +1,34 @@
-import { FC, SyntheticEvent } from 'react'
+import { FC, SyntheticEvent, useContext } from 'react'
 import { MainPageWraper, TopBar, TopBarMenu } from '@/pages/Main/MainPage.styles'
 import logoImg from '@/assets/lollipop.png'
 import MainContent from '@/components/MainContent/MainContent'
 import Footer from '@/components/Footer/Footer'
+import { ContextValues, ScrollContext } from '@/providers/ScrollProvider'
 
 const MainPage: FC = () => {
+  const { projectsRef, aboutRef, contactRef } = useContext<ContextValues>(ScrollContext)
+
   const handleScrollView = (e: SyntheticEvent<HTMLLIElement>) => {
     const section = e.currentTarget.dataset.section
 
     switch (section) {
       case '0':
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0 })
         break
       case '1':
-        window.scrollTo({ top: 500, behavior: 'smooth' })
+        if (projectsRef != undefined) {
+          projectsRef.current?.scrollIntoView({ block: 'center' })
+        }
         break
       case '2':
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        if (aboutRef != undefined) {
+          aboutRef.current?.scrollIntoView({ block: 'center' })
+        }
         break
       case '3':
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        if (contactRef != undefined) {
+          contactRef.current?.scrollIntoView({ block: 'start' })
+        }
         break
     }
   }

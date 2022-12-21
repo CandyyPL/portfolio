@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const MainPageWraper = styled.div`
   width: 100%;
-  height: 300vh;
+  height: 400vh;
 
   background-color: ${({ theme }) => theme.colors.bg};
 
