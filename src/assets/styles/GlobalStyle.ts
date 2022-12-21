@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #182021;
+    background-color: #111a24;
   }
 
   ::-webkit-scrollbar-thumb {

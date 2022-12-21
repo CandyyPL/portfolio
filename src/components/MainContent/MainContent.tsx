@@ -22,24 +22,24 @@ const MainContent: FC = () => {
   return (
     <MainContentWrapper>
       <div className='section-tags'>
-        <span className='tag'>&lt;hello&gt;</span>
+        <span className='tag'>&lt;welcome&gt;</span>
         <WelcomeSection />
-        <span className='tag'>&lt;hello/&gt;</span>
+        <span className='tag'>&lt;/welcome&gt;</span>
       </div>
       <div className='section-tags' ref={projectsRef}>
         <span className='tag'>&lt;projects&gt;</span>
         <ProjectsSection />
-        <span className='tag'>&lt;projects/&gt;</span>
+        <span className='tag'>&lt;/projects&gt;</span>
       </div>
       <div className='section-tags' ref={aboutRef}>
         <span className='tag'>&lt;about&gt;</span>
         <AboutSection />
-        <span className='tag'>&lt;about/&gt;</span>
+        <span className='tag'>&lt;/about&gt;</span>
       </div>
       <div className='section-tags' ref={contactRef}>
         <span className='tag'>&lt;contact&gt;</span>
         <ContactSection />
-        <span className='tag'>&lt;contact/&gt;</span>
+        <span className='tag'>&lt;/contact&gt;</span>
       </div>
     </MainContentWrapper>
   )

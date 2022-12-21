@@ -32,7 +32,25 @@ export const TopBar = styled.div`
   z-index: 99999;
 
   img {
+    animation-name: loading;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+
     height: 100%;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 `
 

@@ -5,7 +5,7 @@ const Theme = {
     roboto: 'Roboto, sans-serif',
   },
   colors: {
-    bg: '#182021',
+    bg: '#111a24',
     red: '#f45866',
   },
 }

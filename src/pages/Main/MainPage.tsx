@@ -4,6 +4,7 @@ import logoImg from '@/assets/lollipop.png'
 import MainContent from '@/components/MainContent/MainContent'
 import Footer from '@/components/Footer/Footer'
 import { ContextValues, ScrollContext } from '@/providers/ScrollProvider'
+import Intro from '@/components/Intro/Intro'
 
 const MainPage: FC = () => {
   const { projectsRef, aboutRef, contactRef } = useContext<ContextValues>(ScrollContext)
@@ -35,6 +36,7 @@ const MainPage: FC = () => {
 
   return (
     <MainPageWraper>
+      {/* <Intro /> */}
       <TopBar>
         <img src={logoImg} alt='logo' />
         <>
