@@ -4,7 +4,9 @@ export const WelcomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin: 40px 0 20px 0;
+  @media only screen and (min-width: 720px) {
+    margin: 40px 0 20px 0;
+  }
 
   position: relative;
   z-index: 999;
@@ -14,13 +16,35 @@ export const WelcomeWrapper = styled.div`
   }
 
   .introduce {
-    font-size: 20px;
+    @media only screen and (max-width: 720px) {
+      font-size: 14px;
+    }
+
+    @media only screen and (min-width: 720px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 20px;
+    }
+
     font-family: ${({ theme }) => theme.fonts.code};
     color: ${({ theme }) => theme.colors.red};
   }
 
   .name {
-    font-size: 100px;
+    @media only screen and (max-width: 720px) {
+      font-size: 50px;
+    }
+
+    @media only screen and (min-width: 720px) {
+      font-size: 80px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 100px;
+    }
+
     font-weight: 900;
     color: #666;
 
@@ -28,7 +52,18 @@ export const WelcomeWrapper = styled.div`
   }
 
   .sub {
-    font-size: 75px;
+    @media only screen and (max-width: 720px) {
+      font-size: 40px;
+    }
+
+    @media only screen and (min-width: 720px) {
+      font-size: 60px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 75px;
+    }
+
     font-weight: 800;
     color: #444;
   }

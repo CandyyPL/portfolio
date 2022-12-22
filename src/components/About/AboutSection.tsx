@@ -9,6 +9,9 @@ const AboutSection: FC = () => {
       <div className='title'>
         That's <span>who I am</span>.
       </div>
+      <div className='image small-screen'>
+        <img src={programmerImg} alt='programmer' />
+      </div>
       <div className='center'>
         <div className='text'>
           <p>Hello! My name is Marcel and I am a front-end web developer from Poland.</p>
@@ -49,13 +52,13 @@ const AboutSection: FC = () => {
             </span>
           </ul>
         </div>
-        <div className='image'>
+        <div className='image large-screen'>
           <img src={programmerImg} alt='programmer' />
         </div>
       </div>
-      <div className='bottom'>
+      {/* <div className='bottom'>
         <span>Code is like humor. When you have to explain it, it's bad. ~ Cory House</span>
-      </div>
+      </div> */}
     </AboutWrapper>
   )
 }

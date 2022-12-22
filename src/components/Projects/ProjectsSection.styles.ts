@@ -96,6 +96,7 @@ export const ProjectsList = styled.ul`
   flex-wrap: wrap;
 
   list-style: none;
+  padding: 0;
 
   .nothing {
     font-size: 24px;
@@ -116,13 +117,21 @@ export const ProjectsList = styled.ul`
 `
 
 export const Project = styled.li`
-  width: 320px;
-  height: 240px;
+  @media only screen and (max-width: 720px) {
+    width: 240px;
+    height: 135px;
+  }
+
+  @media only screen and (min-width: 720px) {
+    width: 320px;
+    height: 240px;
+  }
 
   background-color: #232936;
 
   border-radius: 10px;
   padding: 10px;
+  margin: 20px;
 
   display: flex;
   flex-direction: column;
@@ -143,7 +152,13 @@ export const Project = styled.li`
 
   .thumb {
     img {
-      height: 150px;
+      @media only screen and (max-width: 720px) {
+        display: none;
+      }
+
+      @media only screen and (min-width: 720px) {
+        height: 150px;
+      }
 
       border-radius: 5px;
     }

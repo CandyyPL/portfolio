@@ -1,10 +1,9 @@
 import { FC, SyntheticEvent, useContext } from 'react'
-import { MainPageWraper, TopBar, TopBarMenu } from '@/pages/Main/MainPage.styles'
+import { Hamburger, MainPageWraper, TopBar, TopBarMenu } from '@/pages/Main/MainPage.styles'
 import logoImg from '@/assets/lollipop.png'
 import MainContent from '@/components/MainContent/MainContent'
 import Footer from '@/components/Footer/Footer'
 import { ContextValues, ScrollContext } from '@/providers/ScrollProvider'
-import Intro from '@/components/Intro/Intro'
 
 const MainPage: FC = () => {
   const { projectsRef, aboutRef, contactRef } = useContext<ContextValues>(ScrollContext)
@@ -28,7 +27,7 @@ const MainPage: FC = () => {
         break
       case '3':
         if (contactRef != undefined) {
-          contactRef.current?.scrollIntoView({ block: 'center' })
+          contactRef.current?.scrollIntoView({ block: 'start' })
         }
         break
     }
@@ -54,6 +53,24 @@ const MainPage: FC = () => {
               contact
             </li>
           </TopBarMenu>
+          <Hamburger>
+            <span className='hamburger-inner'>
+              <ul className='menu'>
+                <li onClick={handleScrollView} data-section='0'>
+                  welcome
+                </li>
+                <li onClick={handleScrollView} data-section='1'>
+                  projects
+                </li>
+                <li onClick={handleScrollView} data-section='2'>
+                  about
+                </li>
+                <li className='contact' onClick={handleScrollView} data-section='3'>
+                  contact
+                </li>
+              </ul>
+            </span>
+          </Hamburger>
         </>
       </TopBar>
       <MainContent />
