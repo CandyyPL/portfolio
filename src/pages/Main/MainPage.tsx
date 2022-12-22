@@ -28,7 +28,7 @@ const MainPage: FC = () => {
         break
       case '3':
         if (contactRef != undefined) {
-          contactRef.current?.scrollIntoView({ block: 'start' })
+          contactRef.current?.scrollIntoView({ block: 'center' })
         }
         break
     }

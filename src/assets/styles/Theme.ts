@@ -3,6 +3,7 @@ const Theme = {
     default: 'Nunito, sans-serif',
     code: 'Source Code Pro, sans-serif',
     roboto: 'Roboto, sans-serif',
+    quote: 'Charmonman, sans-serif',
   },
   colors: {
     bg: '#111a24',

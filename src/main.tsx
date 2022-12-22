@@ -11,7 +11,7 @@ import { GraphQLClient, ClientContext } from 'graphql-hooks'
 
 WebFont.load({
   google: {
-    families: ['Nunito', 'Source Code Pro', 'Roboto'],
+    families: ['Nunito', 'Source Code Pro', 'Roboto', 'Charmonman'],
   },
 })
 

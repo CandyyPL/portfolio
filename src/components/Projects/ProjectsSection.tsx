@@ -11,6 +11,7 @@ interface IThumb {
 }
 
 interface ITech {
+  id: string
   techname: string
 }
 
@@ -58,8 +59,6 @@ const ProjectsSection: FC = () => {
     if (data != undefined) {
       setProjects(data.allProjects)
     }
-
-    console.log(data)
   }, [data])
 
   return (
@@ -77,15 +76,15 @@ const ProjectsSection: FC = () => {
         <ProjectsList>
           {projects.length > 0 ? (
             projects.map((p) => (
-              <a href={p.githublink.linkurl}>
-                <Project key={p.id}>
+              <a href={p.githublink.linkurl} key={p.id}>
+                <Project>
                   <div className='title'>{p.projectname}</div>
                   <div className='thumb'>
                     <img src={p.projectthumbnail.url} alt='thumbnail' />
                   </div>
                   <div className='techs'>
                     {p.techlist.length > 0
-                      ? p.techlist.map((t) => <span>{t.techname}</span>)
+                      ? p.techlist.map((t) => <span key={t.id}>{t.techname}</span>)
                       : null}
                   </div>
                 </Project>
