@@ -13,15 +13,13 @@ export const MainContentWrapper = styled.div`
 
   section {
     position: relative;
-
-    scroll-margin-top: 2000px;
   }
 
   .tag {
     position: absolute;
     transform: translateX(-40px);
     font-family: ${({ theme }) => theme.fonts.code};
-    color: #444;
+    color: #555;
   }
 
   .section-tags {

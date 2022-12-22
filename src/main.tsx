@@ -6,6 +6,7 @@ import GlobalStyle from '@/assets/styles/GlobalStyle'
 import { ThemeProvider } from 'styled-components'
 import Theme from '@/assets/styles/Theme'
 import ScrollProvider from '@/providers/ScrollProvider'
+import Background from '@/components/Background/Background'
 
 WebFont.load({
   google: {
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <ScrollProvider>
+        <Background />
         <App />
       </ScrollProvider>
     </ThemeProvider>

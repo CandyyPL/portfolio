@@ -6,6 +6,9 @@ export const WelcomeWrapper = styled.div`
 
   margin: 40px 0 20px 0;
 
+  position: relative;
+  z-index: 999;
+
   span {
     font-family: ${({ theme }) => theme.fonts.roboto};
   }

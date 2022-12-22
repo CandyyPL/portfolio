@@ -4,8 +4,6 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   height: 200px;
 
-  /* background-color: transparent; */
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,9 +14,11 @@ export const FooterWrapper = styled.footer`
     content: '';
 
     width: 95%;
-    height: 4px;
+    height: 5px;
 
     background-color: #000;
+
+    border-radius: 10px;
 
     position: absolute;
     top: 0;
@@ -43,7 +43,17 @@ export const FooterWrapper = styled.footer`
     justify-content: flex-start;
 
     img {
-      height: 40px;
+      height: 80px;
+      padding: 10px;
+
+      border: 3px solid transparent;
+      border-radius: 10px;
+
+      &:hover {
+        border: 3px solid white;
+      }
+
+      transition: border 0.2s;
     }
   }
 
@@ -73,28 +83,7 @@ export const FooterWrapper = styled.footer`
         color: coral;
       }
 
-      position: relative;
-
-      &::after {
-        content: '';
-
-        width: 100%;
-        height: 1px;
-
-        background-color: coral;
-
-        position: absolute;
-        bottom: -10%;
-        left: 0;
-
-        transform: scaleX(0);
-        transform-origin: 0%;
-        transition: transform 0.3s;
-      }
-
-      &:hover::after {
-        transform: scaleX(1);
-      }
+      transition: color 0.1s;
     }
   }
 `

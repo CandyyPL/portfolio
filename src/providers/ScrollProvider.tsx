@@ -1,7 +1,7 @@
 import React, { createContext, FC, useState, Dispatch, SetStateAction } from 'react'
 
 interface Props {
-  children: JSX.Element
+  children: JSX.Element[]
 }
 
 export interface ContextValues {
