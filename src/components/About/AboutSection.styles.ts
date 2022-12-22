@@ -54,6 +54,10 @@ export const AboutWrapper = styled.section`
       font-family: ${({ theme }) => theme.fonts.roboto};
       color: #bbb;
 
+      p {
+        margin-bottom: 10px;
+      }
+
       ul {
         width: 100%;
 
