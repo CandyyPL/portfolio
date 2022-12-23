@@ -55,6 +55,12 @@ export const MainContentWrapper = styled.div`
 
     @media only screen and (min-width: 720px) {
       &:not(:last-child) {
+        margin-bottom: 30vh;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+      &:not(:last-child) {
         margin-bottom: 40vh;
       }
     }

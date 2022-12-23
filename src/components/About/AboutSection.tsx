@@ -56,9 +56,9 @@ const AboutSection: FC = () => {
           <img src={programmerImg} alt='programmer' />
         </div>
       </div>
-      {/* <div className='bottom'>
+      <div className='bottom'>
         <span>Code is like humor. When you have to explain it, it's bad. ~ Cory House</span>
-      </div> */}
+      </div>
     </AboutWrapper>
   )
 }

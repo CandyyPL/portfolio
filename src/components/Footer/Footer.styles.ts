@@ -21,6 +21,8 @@ export const FooterWrapper = styled.footer`
 
   position: relative;
 
+  margin-top: 5vw;
+
   &::before {
     content: '';
 

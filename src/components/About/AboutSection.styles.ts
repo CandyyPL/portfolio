@@ -40,7 +40,7 @@ export const AboutWrapper = styled.section`
 
   .center {
     width: 100%;
-    height: 75%;
+    height: 80%;
 
     display: flex;
     justify-content: center;
@@ -99,7 +99,15 @@ export const AboutWrapper = styled.section`
         justify-content: flex-start;
         align-items: center;
 
-        @media only screen and (max-width: 720px) {
+        @media only screen and (max-width: 360px) {
+          padding: 0;
+
+          span {
+            margin-right: 5px;
+          }
+        }
+
+        @media only screen and (min-width: 360px) and (max-width: 720px) {
           padding: 0;
 
           span {
@@ -119,6 +127,14 @@ export const AboutWrapper = styled.section`
           display: flex;
           flex-direction: row;
           align-items: center;
+
+          @media only screen and (max-width: 360px) {
+            font-size: 10px;
+
+            img {
+              height: 30px;
+            }
+          }
 
           @media only screen and (max-width: 720px) {
             font-size: 14px;
@@ -176,7 +192,21 @@ export const AboutWrapper = styled.section`
   }
 
   .bottom {
-    font-size: 28px;
+    @media only screen and (max-width: 720px) {
+      font-size: 16px;
+      text-align: center;
+
+      margin-top: 40px;
+    }
+
+    @media only screen and (min-width: 720px) {
+      font-size: 20px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 28px;
+    }
+
     font-family: ${({ theme }) => theme.fonts.quote};
     color: #ddd;
   }

@@ -4,7 +4,7 @@ export const MainPageWraper = styled.div`
   width: 100%;
 
   @media only screen and (min-width: 720px) {
-    height: 400vh;
+    height: 300vh;
   }
 
   @media only screen and (min-width: 1280px) {
@@ -15,7 +15,7 @@ export const MainPageWraper = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `
 
@@ -164,11 +164,11 @@ export const TopBarMenu = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 720px) {
     display: none;
   }
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 720px) {
     display: flex;
   }
 
