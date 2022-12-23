@@ -9,9 +9,6 @@ const AboutSection: FC = () => {
       <div className='title'>
         That's <span>who I am</span>.
       </div>
-      <div className='image small-screen'>
-        <img src={programmerImg} alt='programmer' />
-      </div>
       <div className='center'>
         <div className='text'>
           <p>Hello! My name is Marcel and I am a front-end web developer from Poland.</p>
@@ -22,37 +19,71 @@ const AboutSection: FC = () => {
           </p>
           <p>As for the technologies, I prefer MERN stack.</p>
           <ul>
-            <span>
-              <li>
-                <img src={arrowImg} alt='arrow' />
-                JavaScript
-              </li>
-              <li>
-                <img src={arrowImg} alt='arrow' />
-                React
-              </li>
-              <li>
-                <img src={arrowImg} alt='arrow' />
-                MongoDB
-              </li>
-            </span>
-            <span>
-              <li>
-                <img src={arrowImg} alt='arrow' />
-                Typescript
-              </li>
-              <li>
-                <img src={arrowImg} alt='arrow' />
-                SCSS
-              </li>
-              <li>
-                <img src={arrowImg} alt='arrow' />
-                DatoCMS
-              </li>
-            </span>
+            <div className='medium'>
+              <span>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  JavaScript
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  TypeScript
+                </li>
+              </span>
+              <span>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  React
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  Node.js
+                </li>
+              </span>
+              <span>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  MongoDB
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  DatoCMS
+                </li>
+              </span>
+            </div>
+            <div className='large'>
+              <span>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  JavaScript
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  React
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  MongoDB
+                </li>
+              </span>
+              <span>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  Typescript
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  Node.js
+                </li>
+                <li>
+                  <img src={arrowImg} alt='arrow' />
+                  DatoCMS
+                </li>
+              </span>
+            </div>
           </ul>
         </div>
-        <div className='image large-screen'>
+        <div className='image'>
           <img src={programmerImg} alt='programmer' />
         </div>
       </div>

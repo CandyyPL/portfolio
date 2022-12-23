@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const AboutWrapper = styled.section`
   width: 100%;
-  height: 60vh;
+  height: 65vh;
 
   /* border: 5px solid white; */
 
@@ -19,9 +19,21 @@ export const AboutWrapper = styled.section`
     @media only screen and (max-width: 720px) {
       font-size: 30px;
       text-align: center;
+      /* margin-bottom: 40px; */
     }
 
     @media only screen and (min-width: 720px) {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 1280px) and (max-width: 1600px) {
+      font-size: 55px;
+      text-align: right;
+      padding-right: 80px;
+    }
+
+    @media only screen and (min-width: 1600px) {
       font-size: 65px;
       text-align: right;
       padding-right: 80px;
@@ -74,13 +86,24 @@ export const AboutWrapper = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
 
       @media only screen and (max-width: 720px) {
         font-size: 14px;
       }
 
       @media only screen and (min-width: 720px) {
+        font-size: 16px;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        align-items: center;
+      }
+
+      @media only screen and (min-width: 1280px) {
+        align-items: flex-start;
+      }
+
+      @media only screen and (min-width: 1280px) {
         font-size: 18px;
       }
 
@@ -89,6 +112,10 @@ export const AboutWrapper = styled.section`
 
       p {
         margin-bottom: 10px;
+
+        @media only screen and (max-width: 1280px) {
+          text-align: center;
+        }
       }
 
       ul {
@@ -96,28 +123,62 @@ export const AboutWrapper = styled.section`
 
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
         align-items: center;
 
-        @media only screen and (max-width: 360px) {
-          padding: 0;
+        padding: 0;
 
+        .medium,
+        .large {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        @media only screen and (max-width: 360px) {
           span {
             margin-right: 5px;
           }
         }
 
         @media only screen and (min-width: 360px) and (max-width: 720px) {
-          padding: 0;
-
           span {
             margin-right: 30px;
           }
+
+          .medium {
+            display: none;
+          }
+
+          .large {
+            display: flex;
+          }
         }
 
-        @media only screen and (min-width: 720px) {
+        @media only screen and (min-width: 720xp) and (max-width: 1280px) {
+          justify-content: center;
+
           span {
             margin-right: 50px;
+          }
+
+          .medium {
+            display: flex;
+          }
+
+          .large {
+            display: none;
+          }
+        }
+
+        @media only screen and (min-width: 1280px) {
+          justify-content: flex-start;
+
+          .medium {
+            display: none;
+          }
+
+          .large {
+            display: flex;
           }
         }
 
@@ -138,6 +199,10 @@ export const AboutWrapper = styled.section`
 
           @media only screen and (max-width: 720px) {
             font-size: 14px;
+
+            img {
+              height: 35px;
+            }
           }
         }
       }
@@ -145,49 +210,22 @@ export const AboutWrapper = styled.section`
   }
 
   .image {
-    @media only screen and (max-width: 720px) {
-      width: 100%;
-      height: 50%;
-      margin-bottom: 50px;
+    @media only screen and (max-width: 1280px) {
+      display: none;
     }
 
-    @media only screen and (min-width: 720px) {
-      width: 50%;
-      height: 100%;
+    @media only screen and (min-width: 1280px) {
+      display: flex;
     }
 
-    display: flex;
+    width: 50%;
+    height: 100%;
+
     justify-content: center;
     align-items: center;
 
     img {
-      @media only screen and (max-width: 720px) {
-        height: 60%;
-      }
-
-      @media only screen and (min-width: 720px) {
-        height: 60%;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 720px) {
-    .small-screen {
-      display: flex;
-    }
-
-    .large-screen {
-      display: none;
-    }
-  }
-
-  @media only screen and (min-width: 720px) {
-    .small-screen {
-      display: none;
-    }
-
-    .large-screen {
-      display: flex;
+      height: 300px;
     }
   }
 
@@ -196,11 +234,12 @@ export const AboutWrapper = styled.section`
       font-size: 16px;
       text-align: center;
 
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
     @media only screen and (min-width: 720px) {
-      font-size: 20px;
+      font-size: 22px;
+      text-align: center;
     }
 
     @media only screen and (min-width: 1280px) {

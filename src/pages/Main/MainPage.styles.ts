@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 export const MainPageWraper = styled.div`
   width: 100%;
+  height: fit-content;
 
   @media only screen and (min-width: 720px) {
-    height: 300vh;
+    max-height: 3000px;
   }
 
   @media only screen and (min-width: 1280px) {
-    height: 360vh;
+    max-height: 3600px;
   }
 
   background-color: ${({ theme }) => theme.colors.bg};
@@ -21,7 +22,14 @@ export const MainPageWraper = styled.div`
 
 export const TopBar = styled.div`
   width: 100%;
-  height: 100px;
+
+  @media only screen and (max-width: 720px) {
+    height: 75px;
+  }
+
+  @media only screen and (min-width: 720px) {
+    height: 100px;
+  }
 
   background-color: transparent;
   backdrop-filter: blur(10px);

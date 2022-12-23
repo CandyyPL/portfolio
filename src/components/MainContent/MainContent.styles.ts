@@ -16,7 +16,17 @@ export const MainContentWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  margin-top: 25vh;
+  @media only screen and (max-width: 720px) {
+    margin-top: 30vh;
+  }
+
+  @media only screen and (min-width: 720px) {
+    margin-top: 35vh;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    margin-top: 28vh;
+  }
 
   margin-inline: auto;
 
@@ -43,19 +53,15 @@ export const MainContentWrapper = styled.div`
   .section-tags {
     width: 100%;
 
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
-
     @media only screen and (max-width: 720px) {
       &:not(:last-child) {
-        margin-bottom: 20vh;
+        margin-bottom: 200px;
       }
     }
 
     @media only screen and (min-width: 720px) {
       &:not(:last-child) {
-        margin-bottom: 30vh;
+        margin-bottom: 300px;
       }
     }
 

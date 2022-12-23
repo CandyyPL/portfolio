@@ -7,13 +7,16 @@ import AboutSection from '@/components/About/AboutSection'
 import ContactSection from '@/components/Contact/ContactSection'
 
 const MainContent: FC = () => {
-  const { setProjectsRef, setAboutRef, setContactRef } = useContext<ContextValues>(ScrollContext)
+  const { setWelcomeRef, setProjectsRef, setAboutRef, setContactRef } =
+    useContext<ContextValues>(ScrollContext)
 
+  const welcomeRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    setWelcomeRef(welcomeRef)
     setProjectsRef(projectsRef)
     setAboutRef(aboutRef)
     setContactRef(contactRef)
@@ -21,7 +24,7 @@ const MainContent: FC = () => {
 
   return (
     <MainContentWrapper>
-      <div className='section-tags'>
+      <div className='section-tags' ref={welcomeRef}>
         <span className='tag'>&lt;welcome&gt;</span>
         <WelcomeSection />
         <span className='tag'>&lt;/welcome&gt;</span>

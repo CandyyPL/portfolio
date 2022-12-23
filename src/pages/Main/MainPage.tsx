@@ -6,14 +6,16 @@ import Footer from '@/components/Footer/Footer'
 import { ContextValues, ScrollContext } from '@/providers/ScrollProvider'
 
 const MainPage: FC = () => {
-  const { projectsRef, aboutRef, contactRef } = useContext<ContextValues>(ScrollContext)
+  const { welcomeRef, projectsRef, aboutRef, contactRef } = useContext<ContextValues>(ScrollContext)
 
   const handleScrollView = (e: SyntheticEvent<HTMLLIElement>) => {
     const section = e.currentTarget.dataset.section
 
     switch (section) {
       case '0':
-        window.scrollTo({ top: 0 })
+        if (welcomeRef != undefined) {
+          welcomeRef.current?.scrollIntoView({ block: 'center' })
+        }
         break
       case '1':
         if (projectsRef != undefined) {
@@ -35,7 +37,6 @@ const MainPage: FC = () => {
 
   return (
     <MainPageWraper>
-      {/* <Intro /> */}
       <TopBar>
         <img src={logoImg} alt='logo' />
         <>
