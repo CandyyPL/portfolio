@@ -19,7 +19,7 @@ const AboutSection: FC = () => {
           </p>
           <p>As for the technologies, I prefer MERN stack.</p>
           <ul>
-            <div className='medium'>
+            {/* <div className='medium'>
               <span>
                 <li>
                   <img src={arrowImg} alt='arrow' />
@@ -80,7 +80,31 @@ const AboutSection: FC = () => {
                   DatoCMS
                 </li>
               </span>
-            </div>
+            </div> */}
+            <li>
+              <img src={arrowImg} alt='arrow' />
+              JavaScript
+            </li>
+            <li>
+              <img src={arrowImg} alt='arrow' />
+              TypeScript
+            </li>
+            <li>
+              <img src={arrowImg} alt='arrow' />
+              React
+            </li>
+            <li>
+              <img src={arrowImg} alt='arrow' />
+              Node.js
+            </li>
+            <li>
+              <img src={arrowImg} alt='arrow' />
+              MongoDB
+            </li>
+            <li>
+              <img src={arrowImg} alt='arrow' />
+              DatoCMS
+            </li>
           </ul>
         </div>
         <div className='image'>

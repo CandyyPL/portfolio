@@ -104,6 +104,8 @@ export const ProjectsList = styled.ul`
     font-weight: 600;
     color: #888;
 
+    text-align: center;
+
     a {
       color: lightgreen;
 

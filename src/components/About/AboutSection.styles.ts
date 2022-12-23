@@ -121,23 +121,37 @@ export const AboutWrapper = styled.section`
       ul {
         width: 100%;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
 
-        padding: 0;
-
-        .medium,
-        .large {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
+        @media only screen and (max-width: 720px) {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
         }
 
-        @media only screen and (max-width: 360px) {
+        @media only screen and (min-width: 720px) {
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+
+        @media only screen and (min-width: 1280px) {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        padding: 0;
+        margin-inline: auto;
+
+        /* @media only screen and (max-width: 360px) {
           span {
             margin-right: 5px;
           }
+        }
+
+        .medium,
+        .large {
+          display: none;
+          flex-direction: row;
+          align-items: center;
         }
 
         @media only screen and (min-width: 360px) and (max-width: 720px) {
@@ -180,7 +194,7 @@ export const AboutWrapper = styled.section`
           .large {
             display: flex;
           }
-        }
+        } */
 
         list-style: none;
 
