@@ -6,7 +6,7 @@ const App: FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
       </Routes>
     </Router>
   )

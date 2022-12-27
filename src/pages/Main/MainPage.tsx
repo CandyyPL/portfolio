@@ -38,23 +38,23 @@ const MainPage: FC = () => {
   return (
     <MainPageWraper>
       <TopBar>
-        <img src={logoImg} alt='logo' />
+        <img src={logoImg} alt="logo" />
         <>
           <TopBarMenu>
-            <li onClick={handleScrollView} data-section='0'>
+            <li onClick={handleScrollView} data-section="0">
               welcome
             </li>
-            <li onClick={handleScrollView} data-section='1'>
+            <li onClick={handleScrollView} data-section="1">
               projects
             </li>
-            <li onClick={handleScrollView} data-section='2'>
+            <li onClick={handleScrollView} data-section="2">
               about
             </li>
-            <li className='contact' onClick={handleScrollView} data-section='3'>
+            <li className="contact" onClick={handleScrollView} data-section="3">
               contact
             </li>
           </TopBarMenu>
-          <Hamburger>
+          {/* <Hamburger>
             <span className='hamburger-inner'>
               <ul className='menu'>
                 <li onClick={handleScrollView} data-section='0'>
@@ -71,7 +71,7 @@ const MainPage: FC = () => {
                 </li>
               </ul>
             </span>
-          </Hamburger>
+          </Hamburger> */}
         </>
       </TopBar>
       <MainContent />
