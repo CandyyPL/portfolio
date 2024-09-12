@@ -1,11 +1,16 @@
+import HeroSection from '@/components/sections/Hero/HeroSection.jsx'
 import Background from '@/components/Background/Background.jsx'
+import Content from '@/components/Content/Content.jsx'
+import Topbar from '@/components/Topbar/Topbar.jsx'
 
 const App = () => {
   return (
     <>
       <Background />
-      <div className='topbar'></div>
-      <div className='content'></div>
+      <Content>
+        <Topbar />
+        <HeroSection />
+      </Content>
     </>
   )
 }

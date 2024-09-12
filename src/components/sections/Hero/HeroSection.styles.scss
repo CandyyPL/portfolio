@@ -1,0 +1,91 @@
+.hero-wrapper {
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: colors.$lightDim;
+
+    line-height: 18px;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: 600;
+    color: colors.$light;
+
+    line-height: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: colors.$light;
+
+    line-height: 40px;
+  }
+
+  .text-accent {
+    color: colors.$yellow;
+  }
+
+  .contact-button {
+    width: 175px;
+    height: 60px;
+
+    background-color: colors.$yellow;
+    border: none;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+
+    line-height: 20px;
+  }
+}
+
+.photo {
+  width: 100%;
+
+  position: relative;
+  z-index: 1;
+
+  img {
+    width: 100%;
+
+    border-radius: 10px;
+  }
+
+  &::before {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+
+    border: 6px solid colors.$yellow;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    content: '';
+  }
+}

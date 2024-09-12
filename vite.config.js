@@ -15,7 +15,6 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use "@/assets/styles/colors";
-          @use "@/assets/styles/fonts";
         `,
       },
     },
