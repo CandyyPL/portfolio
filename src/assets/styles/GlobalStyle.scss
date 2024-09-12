@@ -1,5 +1,6 @@
 *,
-*::before *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -18,4 +19,8 @@ body {
   &.nav-active {
     height: 100vh;
   }
+}
+
+.text-accent {
+  color: colors.$yellow;
 }

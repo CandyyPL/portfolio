@@ -4,7 +4,7 @@ import './HeroSection.styles.scss'
 const HeroSection = () => {
   return (
     <section className='hero-wrapper'>
-      <section className='texts'>
+      <header className='texts'>
         <h3>Cześć, jestem</h3>
         <h1>Marcel.</h1>
         <h2>
@@ -15,7 +15,7 @@ const HeroSection = () => {
           .
         </h2>
         <button className='contact-button'>NAPISZ DO MNIE</button>
-      </section>
+      </header>
       <section className='photo'>
         <img src={profileImg} alt='Zdjęcie profilowe' />
       </section>

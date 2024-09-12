@@ -13,9 +13,9 @@
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
+    "devicon": "^2.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.78.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

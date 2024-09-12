@@ -1,0 +1,44 @@
+.card-wrapper {
+  width: 320px;
+  height: 450px;
+
+  background-color: colors.$bgLight;
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.under-image {
+  width: 100%;
+  height: 270px;
+
+  padding-inline: 16px;
+}
+
+header {
+  margin-top: 10px;
+  margin-bottom: 12px;
+
+  h1 {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    color: colors.$light;
+
+    text-align: right;
+  }
+}
+
+summary {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: colors.$lightDim;
+}
