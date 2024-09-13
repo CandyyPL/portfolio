@@ -1,7 +1,7 @@
-import './Content.styles.scss'
+import Style from './Content.styles.js'
 
 const Content = ({ children }) => {
-  return <main className='content-wrapper'>{children}</main>
+  return <Style.ContentWrapper className='content-wrapper'>{children}</Style.ContentWrapper>
 }
 
 export default Content

@@ -1,24 +1,22 @@
-.projects-wrapper {
+import styled from 'styled-components'
+
+const ProjectsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 50px; //! REMOVE LATER; ONLY FOR TESTING
-
-  h1 {
+  h1.projects-header {
     font-size: 32px;
     line-height: 32px;
     font-weight: 600;
-    color: colors.$light;
+    color: ${({ theme }) => theme.colors.light};
 
     text-align: center;
-
-    margin: 0;
   }
-}
+`
 
-.carousel-indicator {
+const CarouselIndicator = styled.div`
   width: 100%;
   height: 40px;
 
@@ -28,11 +26,11 @@
   justify-content: center;
   align-items: center;
 
-  div {
+  div.carousel-indicator-dot {
     width: 12px;
     height: 12px;
 
-    background-color: colors.$light;
+    background-color: ${({ theme }) => theme.colors.light};
 
     border-radius: 50%;
 
@@ -40,4 +38,12 @@
       margin-right: 12px;
     }
   }
+`
+
+const Carousel = styled.section``
+
+export default {
+  ProjectsWrapper,
+  CarouselIndicator,
+  Carousel,
 }

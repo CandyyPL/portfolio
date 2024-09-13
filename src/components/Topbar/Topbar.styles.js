@@ -1,9 +1,11 @@
-.topbar-wrapper {
+import styled from 'styled-components'
+
+const TopbarWrapper = styled.section`
   width: 100%;
   height: 50px;
-}
+`
 
-.mobile {
+const Mobile = styled.div`
   width: 100%;
   height: 100%;
 
@@ -11,9 +13,9 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-}
+`
 
-.hamburger {
+const Hamburger = styled.button`
   width: 48px;
   height: 48px;
 
@@ -26,22 +28,22 @@
 
   position: relative;
   z-index: 10;
-}
+`
 
-.hamburger-inner {
+const HamburgerInner = styled.span`
   width: 38px;
   height: 26px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-}
+`
 
-.hamburger-line {
+const HamburgerLine = styled.span`
   width: 100%;
   height: 3px;
 
-  background-color: colors.$light;
+  background-color: ${(props) => (props.isActive ? 'transparent' : props.theme.colors.light)};
 
   position: relative;
 
@@ -52,7 +54,7 @@
     width: 100%;
     height: 3px;
 
-    background-color: colors.$light;
+    background-color: ${({ theme }) => theme.colors.light};
 
     position: absolute;
     top: 0;
@@ -64,33 +66,19 @@
   }
 
   &::before {
-    transform: translateY(-10px);
+    transform: ${(props) => (props.isActive ? 'translateY(0) rotate(45deg)' : 'translateY(-10px)')};
   }
 
   &::after {
-    transform: translateY(10px);
+    transform: ${(props) => (props.isActive ? 'translateY(0) rotate(-45deg)' : 'translateY(10px)')};
   }
-}
+`
 
-.hamburger-active {
-  .hamburger-line::before {
-    transform: translateY(0) rotate(45deg);
-  }
-
-  .hamburger-line {
-    background-color: transparent;
-  }
-
-  .hamburger-line::after {
-    transform: translateY(0) rotate(-45deg);
-  }
-}
-
-.nav-box {
+const NavBox = styled.aside`
   width: 100vw;
   height: 100vh;
 
-  background-color: colors.$bgDark;
+  background-color: ${({ theme }) => theme.colors.bgDark};
 
   position: fixed;
   top: 0;
@@ -109,4 +97,16 @@
   &.nav-active {
     transform: translateX(0);
   }
+`
+
+const Desktop = styled.div``
+
+export default {
+  TopbarWrapper,
+  Mobile,
+  Hamburger,
+  HamburgerInner,
+  HamburgerLine,
+  NavBox,
+  Desktop,
 }

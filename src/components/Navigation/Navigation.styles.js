@@ -1,11 +1,13 @@
-.nav-wrapper {
+import styled from 'styled-components'
+
+const NavWrapper = styled.nav`
   width: 100%;
 
   position: relative;
   z-index: 10;
-}
+`
 
-.nav-list {
+const NavList = styled.ul`
   padding: 0;
 
   display: flex;
@@ -14,14 +16,14 @@
   align-items: center;
 
   list-style: none;
-}
+`
 
-.nav-item {
+const NavItem = styled.li`
   width: 200px;
   height: 60px;
 
   font-size: 28px;
-  color: colors.$light;
+  color: ${({ theme }) => theme.colors.light};
 
   display: flex;
   justify-content: center;
@@ -32,7 +34,13 @@
   }
 
   &.contact {
-    border: 4px solid colors.$yellow;
+    border: 4px solid ${({ theme }) => theme.colors.yellow};
     border-radius: 10px;
   }
+`
+
+export default {
+  NavWrapper,
+  NavList,
+  NavItem,
 }

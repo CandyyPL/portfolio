@@ -1,21 +1,30 @@
 import ProjectCard from '@/components/sections/Projects/ProjectCard/ProjectCard.jsx'
-import './ProjectsSection.styles.scss'
+import Style from './ProjectsSection.style.js'
+
+const projects = [
+  {
+    thumbnail: 'https://placehold.co/320x180',
+    title: 'Witryna Lakiernii Proszkowej DUST',
+    desc: 'Był to mój pierwszy komercyjny projekt. Lakiernia DUST to firma specjalizująca się w usługach z zakresu malowania proszkowego oraz obróbki strumieniowo-ściernej.',
+    techs: ['js', 'react', 'sass'],
+  },
+]
 
 const ProjectsSection = () => {
   return (
-    <section className='projects-wrapper'>
-      <h1>
+    <Style.ProjectsWrapper>
+      <h1 className='projects-header'>
         A oto kilka moich <span className='text-accent'>projektów</span>..
       </h1>
-      <div className='carousel-indicator'>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <section className='carousel'>
-        <ProjectCard />
-      </section>
-    </section>
+      <Style.CarouselIndicator>
+        <div className='carousel-indicator-dot'></div>
+        <div className='carousel-indicator-dot'></div>
+        <div className='carousel-indicator-dot'></div>
+      </Style.CarouselIndicator>
+      <Style.Carousel>
+        <ProjectCard projectDetails={projects[0]} />
+      </Style.Carousel>
+    </Style.ProjectsWrapper>
   )
 }
 

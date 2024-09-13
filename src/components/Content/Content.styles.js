@@ -1,4 +1,6 @@
-.content-wrapper {
+import styled from 'styled-components'
+
+const ContentWrapper = styled.main`
   width: 90%;
 
   padding-top: 25px;
@@ -16,4 +18,8 @@
     align-items: center;
     gap: 100px;
   }
+`
+
+export default {
+  ContentWrapper,
 }

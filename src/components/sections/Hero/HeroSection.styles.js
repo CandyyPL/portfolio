@@ -1,4 +1,6 @@
-.hero-wrapper {
+import styled from 'styled-components'
+
+const HeroWrapper = styled.section`
   margin-top: 25px;
 
   display: flex;
@@ -6,39 +8,33 @@
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-}
+`
 
-.texts {
+const Texts = styled.header`
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-  }
-
-  h3 {
+  h3.hero-hello-header {
     font-size: 18px;
     font-weight: 400;
-    color: colors.$lightDim;
+    color: ${({ theme }) => theme.colors.lightDim};
 
     line-height: 18px;
   }
 
-  h1 {
+  h1.hero-name-header {
     font-size: 80px;
     font-weight: 600;
-    color: colors.$light;
+    color: ${({ theme }) => theme.colors.light};
 
     line-height: 80px;
   }
 
-  h2 {
+  h2.hero-details-header {
     font-size: 40px;
     font-weight: 600;
-    color: colors.$light;
+    color: ${({ theme }) => theme.colors.light};
 
     line-height: 40px;
   }
@@ -47,7 +43,7 @@
     width: 175px;
     height: 60px;
 
-    background-color: colors.$yellow;
+    background-color: ${({ theme }) => theme.colors.yellow};
     border: none;
 
     font-size: 18px;
@@ -56,15 +52,19 @@
 
     line-height: 20px;
   }
-}
+`
 
-.photo {
-  width: 100%;
-
-  img {
+const Photo = styled.section`
+  img.hero-photo {
     width: 100%;
 
-    border: 6px solid colors.$yellow;
+    border: 6px solid ${({ theme }) => theme.colors.yellowDim};
     border-radius: 10px;
   }
+`
+
+export default {
+  HeroWrapper,
+  Texts,
+  Photo,
 }

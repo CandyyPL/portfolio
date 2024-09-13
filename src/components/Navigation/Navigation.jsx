@@ -1,15 +1,15 @@
-import './Navigation.styles.scss'
+import Style from './Navigation.styles.js'
 
 const Navigation = () => {
   return (
-    <nav className='nav-wrapper'>
-      <ul className='nav-list'>
-        <li className='nav-item'>witaj</li>
-        <li className='nav-item'>projekty</li>
-        <li className='nav-item'>o mnie</li>
-        <li className='nav-item contact'>kontakt</li>
-      </ul>
-    </nav>
+    <Style.NavWrapper>
+      <Style.NavList>
+        <Style.NavItem>witaj</Style.NavItem>
+        <Style.NavItem>projekty</Style.NavItem>
+        <Style.NavItem>o mnie</Style.NavItem>
+        <Style.NavItem className='contact'>kontakt</Style.NavItem>
+      </Style.NavList>
+    </Style.NavWrapper>
   )
 }
 

@@ -1,4 +1,6 @@
-import '@/assets/styles/GlobalStyle.scss'
+import GlobalStyle from '@/assets/styles/GlobalStyle.js'
+import { ThemeProvider } from 'styled-components'
+import Theme from '@/assets/styles/Theme.js'
 import ReactDOM from 'react-dom/client'
 import WebFont from 'webfontloader'
 import App from '@/App.jsx'
@@ -12,6 +14,9 @@ WebFont.load({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 )

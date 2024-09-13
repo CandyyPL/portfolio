@@ -1,26 +1,29 @@
-import './ProjectCard.module.scss'
+import Style from './ProjectCard.styles.js'
+import IconList from '@/helpers/icons.js'
 
-const ProjectCard = () => {
+const ProjectCard = ({ projectDetails }) => {
+  const { thumbnail, title, desc, techs } = projectDetails
+
   return (
-    <article className='card-wrapper'>
-      <section className='image'>
-        <img src='https://placehold.co/320x180' alt='' />
-      </section>
-      <section className='under-image'>
-        <header>
-          <h1>Witryna Lakiernii Proszkowej DUST</h1>
-        </header>
-        <summary>
-          Był to mój pierwszy komercyjny projekt. Lakiernia DUST to firma specjalizująca się w
-          usługach z zakresu malowania proszkowego oraz obróbki strumieniowo-ściernej.
-        </summary>
-        <div className='techs'>
-          <i className='devicon-javascript-plain'></i>
-          <i className='devicon-javascript-plain'></i>
-          <i className='devicon-javascript-plain'></i>
-        </div>
-      </section>
-    </article>
+    <Style.CardWrapper>
+      <Style.Image>
+        <img className='project-thumbnail' src={thumbnail} alt='Miniaturka' />
+      </Style.Image>
+      <Style.ProjectDetails>
+        <Style.ProjectDesc>
+          <Style.Header>
+            <h1 className='project-title'>{title}</h1>
+          </Style.Header>
+          <Style.Summary>{desc}</Style.Summary>
+        </Style.ProjectDesc>
+        <Style.Techs>
+          {techs.map((t) => {
+            const Icon = IconList.find((icon) => icon.name === t).icon
+            return <Icon className='icon' key={t} />
+          })}
+        </Style.Techs>
+      </Style.ProjectDetails>
+    </Style.CardWrapper>
   )
 }
 

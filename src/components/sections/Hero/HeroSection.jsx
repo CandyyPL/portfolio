@@ -1,13 +1,13 @@
 import profileImg from '@/assets/img/profile.png'
-import './HeroSection.styles.scss'
+import Style from './HeroSection.styles.js'
 
 const HeroSection = () => {
   return (
-    <section className='hero-wrapper'>
-      <header className='texts'>
-        <h3>Cześć, jestem</h3>
-        <h1>Marcel.</h1>
-        <h2>
+    <Style.HeroWrapper>
+      <Style.Texts>
+        <h3 className='hero-hello-header'>Cześć, jestem</h3>
+        <h1 className='hero-name-header'>Marcel.</h1>
+        <h2 className='hero-details-header'>
           Tworzę{' '}
           <span className='text-accent'>
             strony <br /> internetowe
@@ -15,11 +15,11 @@ const HeroSection = () => {
           .
         </h2>
         <button className='contact-button'>NAPISZ DO MNIE</button>
-      </header>
-      <section className='photo'>
-        <img src={profileImg} alt='Zdjęcie profilowe' />
-      </section>
-    </section>
+      </Style.Texts>
+      <Style.Photo>
+        <img className='hero-photo' src={profileImg} alt='Zdjęcie profilowe' />
+      </Style.Photo>
+    </Style.HeroWrapper>
   )
 }
 

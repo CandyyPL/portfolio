@@ -1,8 +1,8 @@
-import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { MoveDirection, OutMode } from '@tsparticles/engine'
+import { initParticlesEngine } from '@tsparticles/react'
 import { useEffect, useMemo, useState } from 'react'
 import { loadSlim } from '@tsparticles/slim'
-import './Background.styles.scss'
+import Style from './Background.styles.js'
 
 const Background = () => {
   const [init, setInit] = useState(false)
@@ -55,7 +55,9 @@ const Background = () => {
   )
 
   if (init) {
-    return <Particles id='tsparticles' particlesLoaded={particlesLoaded} options={options} />
+    return (
+      <Style.TsParticles id='tsparticles' particlesLoaded={particlesLoaded} options={options} />
+    )
   }
 
   return <></>

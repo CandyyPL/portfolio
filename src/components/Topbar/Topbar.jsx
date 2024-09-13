@@ -1,31 +1,32 @@
 import Navigation from '@/components/Navigation/Navigation.jsx'
-import { useRef } from 'react'
-import './Topbar.styles.scss'
+import Style from './Topbar.styles.js'
+import { useRef, useState } from 'react'
 
 const Topbar = () => {
   const navRef = useRef(null)
-  const hamburgerRef = useRef(null)
+
+  const [isHamburgerActive, setHamburgerActive] = useState(false)
 
   const toggleNavigation = () => {
+    setHamburgerActive((prev) => !prev)
     navRef.current.classList.toggle('nav-active')
-    hamburgerRef.current.classList.toggle('hamburger-active')
     document.body.classList.toggle('nav-active')
   }
 
   return (
-    <section className='topbar-wrapper'>
-      <aside className='nav-box' ref={navRef}>
+    <Style.TopbarWrapper>
+      <Style.NavBox ref={navRef}>
         <Navigation />
-      </aside>
-      <div className='mobile'>
-        <button className='hamburger' ref={hamburgerRef} onClick={() => toggleNavigation()}>
-          <span className='hamburger-inner'>
-            <span className='hamburger-line'></span>
-          </span>
-        </button>
-      </div>
-      <div className='desktop'></div>
-    </section>
+      </Style.NavBox>
+      <Style.Mobile>
+        <Style.Hamburger onClick={() => toggleNavigation()}>
+          <Style.HamburgerInner>
+            <Style.HamburgerLine isActive={isHamburgerActive}></Style.HamburgerLine>
+          </Style.HamburgerInner>
+        </Style.Hamburger>
+      </Style.Mobile>
+      <Style.Desktop></Style.Desktop>
+    </Style.TopbarWrapper>
   )
 }
 
