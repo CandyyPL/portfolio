@@ -4,6 +4,8 @@ import Content from '@/components/Content/Content.jsx'
 import Topbar from '@/components/Topbar/Topbar.jsx'
 import ProjectsSection from '@/components/sections/Projects/ProjectsSection.jsx'
 import AboutSection from '@/components/sections/About/AboutSection.jsx'
+import ContactSection from '@/components/sections/Contact/ContactSection.jsx'
+import Footer from '@/components/sections/Footer/Footer.jsx'
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
           <HeroSection />
           <ProjectsSection />
           <AboutSection />
+          <ContactSection />
         </section>
       </Content>
+      <Footer />
     </>
   )
 }

@@ -27,7 +27,7 @@ const AboutSection = () => {
       </Style.AboutDesc>
       <Style.Techs>
         <h1 className='about-techs-header'>
-          <span className='text-accent'>Technologie</span> z którymi pracuję
+          <span className='text-accent'>Technologie</span> z którymi pracuję.
         </h1>
         <Style.TechList>
           {IconList.map((i) => (

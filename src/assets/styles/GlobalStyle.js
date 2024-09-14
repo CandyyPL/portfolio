@@ -18,12 +18,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Outfit', sans-serif;
   }
 
-  body {
-    &.nav-active {
-      height: 100vh;
-    }
-  }
-
   h1,
   h2,
   h3,
@@ -36,6 +30,23 @@ const GlobalStyle = createGlobalStyle`
 
   .text-accent {
     color: ${({ theme }) => theme.colors.yellow};;
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.bg};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #444;
+
+    border: 6px solid transparent;
+    border-radius: 10px;
+
+    background-clip: content-box;
   }
 `
 
