@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client'
 import WebFont from 'webfontloader'
 import App from '@/App.jsx'
 import React from 'react'
+import ScrollProvider from '@/context/ScrollProvider.jsx'
 
 WebFont.load({
   google: {
@@ -16,7 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <App />
+      <ScrollProvider>
+        <App />
+      </ScrollProvider>
     </ThemeProvider>
   </React.StrictMode>
 )

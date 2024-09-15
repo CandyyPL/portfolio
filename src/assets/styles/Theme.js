@@ -6,8 +6,7 @@ const Theme = {
     light: '#f4f6f5',
     lightDim: '#c1c4c3',
     yellow: '#fddd0d',
-    yellowDim: '#caaa0a',
-    yellowDark: '#f9cb24',
+    yellowDim: '#dbbb0b',
   },
 }
 

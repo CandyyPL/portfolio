@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const ContentWrapper = styled.main`
-  width: 90%;
+  width: min(90%, 1600px);
 
   padding: 25px 0;
   margin: 0 auto;
@@ -17,6 +17,18 @@ const ContentWrapper = styled.main`
     justify-content: flex-start;
     align-items: center;
     gap: 100px;
+
+    section {
+      width: 100%;
+    }
+
+    @media screen and (width >= 640px) {
+      gap: 200px;
+    }
+
+    @media screen and (width >= 1280px) {
+      gap: 350px;
+    }
   }
 `
 

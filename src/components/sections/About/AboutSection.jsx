@@ -1,10 +1,11 @@
 import profileImg from '@/assets/img/profile2.png'
 import Style from './AboutSection.styles.js'
 import IconList from '@/helpers/icons.js'
+import React from 'react'
 
-const AboutSection = () => {
+const AboutSection = React.forwardRef((_, ref) => {
   return (
-    <Style.AboutWrapper>
+    <Style.AboutWrapper ref={ref}>
       <h1 className='about-header'>
         Kilka słów <span className='text-accent'>o mnie</span>.
       </h1>
@@ -14,14 +15,15 @@ const AboutSection = () => {
         </Style.Photo>
         <Style.Texts>
           <p className='quote'>
-            “Wybierz pracę, którą kochasz, a nie przepracujesz ani jednego dnia w swoim życiu.” ~
+            ”Wybierz pracę, którą kochasz, a nie przepracujesz ani jednego dnia w swoim życiu”. ~
             Konfucjusz
           </p>
           <br />
           <p className='desc'>
-            Wierzę w te słowa, a ponieważ programowanie jest moją pasją od wielu lat, postanowiłem
-            że zajmę się tym zawodowo. Pisanie kodu z pasją jest czymś niesamowitym, czymś, co po
-            odpowiednim czasie zamienia się w styl życia.
+            W pełni zgadzam się z tymi słowami. Programowanie to moja pasja, którą rozwijam od wielu
+            lat, dlatego postanowiłem uczynić z tego swoją ścieżkę zawodową. Kodowanie to nie tylko
+            moje hobby, ale również styl życia, który daje mi niesamowitą satysfakcję i nieustannie
+            inspiruje do rozwoju, a w niedługiej przyszłości stanie się również moją pracą.
           </p>
         </Style.Texts>
       </Style.AboutDesc>
@@ -40,6 +42,6 @@ const AboutSection = () => {
       </Style.Techs>
     </Style.AboutWrapper>
   )
-}
+})
 
 export default AboutSection

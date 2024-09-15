@@ -1,5 +1,7 @@
 import ProjectCard from '@/components/sections/Projects/ProjectCard/ProjectCard.jsx'
 import Style from './ProjectsSection.style.js'
+import React from 'react'
+import githubIcon from '@/assets/icons/github-mark.png'
 
 const projects = [
   {
@@ -10,9 +12,9 @@ const projects = [
   },
 ]
 
-const ProjectsSection = () => {
+const ProjectsSection = React.forwardRef((_, ref) => {
   return (
-    <Style.ProjectsWrapper>
+    <Style.ProjectsWrapper ref={ref}>
       <h1 className='projects-header'>
         A oto kilka moich <span className='text-accent'>projektów</span>..
       </h1>
@@ -24,8 +26,12 @@ const ProjectsSection = () => {
       <Style.Carousel>
         <ProjectCard projectDetails={projects[0]} />
       </Style.Carousel>
+      <Style.GithubLink href='https://github.com/CandyyPL' target='_blank'>
+        <img className='github-icon' src={githubIcon} alt='github' />
+        Zobacz więcej
+      </Style.GithubLink>
     </Style.ProjectsWrapper>
   )
-}
+})
 
 export default ProjectsSection

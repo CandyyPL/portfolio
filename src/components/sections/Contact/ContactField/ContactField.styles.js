@@ -38,7 +38,7 @@ const InputStyles = css`
 
   padding-inline: 10px;
 
-  box-shadow: -5px 5px 0 0 ${({ theme }) => theme.colors.yellowDark};
+  box-shadow: -5px 5px 0 0 ${({ theme }) => theme.colors.yellowDim};
 `
 
 const InputField = styled.input`
@@ -49,6 +49,10 @@ const TextareaField = styled.textarea`
   ${InputStyles}
 
   height: 125px;
+
+  @media screen and (width >= 640px) {
+    height: 175px;
+  }
 
   display: block;
 

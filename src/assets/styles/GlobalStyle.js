@@ -18,6 +18,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Outfit', sans-serif;
   }
 
+  button {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  body.nav-active {
+    overflow-y: hidden !important;
+    position: fixed;
+  }
+
   h1,
   h2,
   h3,

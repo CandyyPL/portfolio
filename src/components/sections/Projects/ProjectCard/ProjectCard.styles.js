@@ -1,31 +1,40 @@
 import styled from 'styled-components'
 
 const CardWrapper = styled.article`
-  width: 320px;
-  height: 450px;
+  min-width: 280px;
+  max-width: 400px;
+
+  min-height: 450px;
+  max-height: 650px;
 
   background-color: ${({ theme }) => theme.colors.bgLight};
   border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Image = styled.section`
   width: 100%;
-  height: 180px;
 
   img.project-thumbnail {
+    width: 100%;
+    height: 100%;
+
     border-radius: 10px 10px 0 0;
   }
 `
 
 const ProjectDetails = styled.section`
   width: 100%;
-  height: 270px;
+  min-height: 270px;
 
   padding-inline: 16px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
 `
 
@@ -55,6 +64,11 @@ const Summary = styled.summary`
   line-height: 24px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.lightDim};
+
+  @media screen and (width >= 640px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 `
 
 const Techs = styled.section`
@@ -63,6 +77,8 @@ const Techs = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 20px;
 
   .icon {
     width: 32px;

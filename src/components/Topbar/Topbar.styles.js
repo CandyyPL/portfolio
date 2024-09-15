@@ -3,6 +3,10 @@ import styled from 'styled-components'
 const TopbarWrapper = styled.section`
   width: 100%;
   height: 50px;
+
+  @media screen and (width >= 1280px) {
+    margin-top: 25px;
+  }
 `
 
 const Mobile = styled.div`
@@ -22,12 +26,19 @@ const Hamburger = styled.button`
   background-color: transparent;
   border: none;
 
+  margin-top: 50px;
+  margin-right: 25px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   position: relative;
   z-index: 10;
+
+  @media screen and (width >= 1280px) {
+    display: none;
+  }
 `
 
 const HamburgerInner = styled.span`
@@ -95,6 +106,17 @@ const NavBox = styled.aside`
   transition: transform 0.2s;
 
   &.nav-active {
+    transform: translateX(0);
+  }
+
+  @media screen and (width >= 1280px) {
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+
+    position: relative;
+
     transform: translateX(0);
   }
 `
