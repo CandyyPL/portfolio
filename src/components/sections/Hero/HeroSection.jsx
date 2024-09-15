@@ -1,7 +1,15 @@
 import profileImg from '@/assets/img/profile.png'
 import Style from './HeroSection.styles.js'
 
-const HeroSection = () => {
+const HeroSection = (props) => {
+  const scrollToContact = () => {
+    const ref = props.contactRef
+
+    if (ref != undefined) {
+      ref.current.scrollIntoView({ behaviour: 'smooth', block: 'center' })
+    }
+  }
+
   return (
     <Style.HeroWrapper>
       <Style.Texts>
@@ -14,7 +22,9 @@ const HeroSection = () => {
           </span>
           .
         </h2>
-        <button className='contact-button'>NAPISZ DO MNIE</button>
+        <button className='contact-button' onClick={() => scrollToContact()}>
+          NAPISZ DO MNIE
+        </button>
       </Style.Texts>
       <Style.Photo>
         <img className='hero-photo' src={profileImg} alt='Zdjęcie profilowe' />

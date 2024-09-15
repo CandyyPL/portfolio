@@ -1,25 +1,23 @@
 import Style from './ProjectCard.styles.js'
 import IconList from '@/helpers/icons.js'
 
-const ProjectCard = ({ projectDetails }) => {
-  const { thumbnail, title, desc, techs } = projectDetails
-
+const ProjectCard = ({ project }) => {
   return (
-    <Style.CardWrapper>
+    <Style.CardWrapper href={project.link.linkurl} target='_blank'>
       <Style.Image>
-        <img className='project-thumbnail' src={thumbnail} alt='Miniaturka' />
+        <img className='project-thumbnail' src={project.projectthumbnail.url} alt='Miniaturka' />
       </Style.Image>
       <Style.ProjectDetails>
         <Style.ProjectDesc>
           <Style.Header>
-            <h1 className='project-title'>{title}</h1>
+            <h1 className='project-title'>{project.projectname}</h1>
           </Style.Header>
-          <Style.Summary>{desc}</Style.Summary>
+          <Style.Summary>{project.projectdesc}</Style.Summary>
         </Style.ProjectDesc>
         <Style.Techs>
-          {techs.map((t) => {
-            const Icon = IconList.find((icon) => icon.name === t).icon
-            return <Icon className='icon' key={t} />
+          {project.techlist.map(({ techname }) => {
+            const Icon = IconList.find((icon) => icon.name === techname).icon
+            return <Icon className='icon' key={techname} />
           })}
         </Style.Techs>
       </Style.ProjectDetails>

@@ -1,20 +1,45 @@
 import ProjectCard from '@/components/sections/Projects/ProjectCard/ProjectCard.jsx'
 import Style from './ProjectsSection.style.js'
-import React from 'react'
 import githubIcon from '@/assets/icons/github-mark.png'
+import { useQuery } from 'graphql-hooks'
+import { useEffect, useState } from 'react'
 
-const projects = [
-  {
-    thumbnail: 'https://placehold.co/320x180',
-    title: 'Witryna Lakiernii Proszkowej DUST',
-    desc: 'Był to mój pierwszy komercyjny projekt. Lakiernia DUST to firma specjalizująca się w usługach z zakresu malowania proszkowego oraz obróbki strumieniowo-ściernej.',
-    techs: ['js', 'react', 'sass'],
-  },
-]
+const QUERY = `
+  query Projects {
+    allProjects {
+      id
+      projectthumbnail {
+        url
+      }
+      projectname
+      projectdesc
+      techlist {
+        techname
+      }
+      link {
+        linkurl
+      }
+    }
 
-const ProjectsSection = React.forwardRef((_, ref) => {
+    _allProjectsMeta {
+      count
+    }
+  }
+`
+
+const ProjectsSection = () => {
+  const { loading, error, data } = useQuery(QUERY)
+
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    if (data) {
+      setProjects(data.allProjects)
+    }
+  }, [data])
+
   return (
-    <Style.ProjectsWrapper ref={ref}>
+    <Style.ProjectsWrapper>
       <h1 className='projects-header'>
         A oto kilka moich <span className='text-accent'>projektów</span>..
       </h1>
@@ -24,7 +49,17 @@ const ProjectsSection = React.forwardRef((_, ref) => {
         <div className='carousel-indicator-dot'></div>
       </Style.CarouselIndicator>
       <Style.Carousel>
-        <ProjectCard projectDetails={projects[0]} />
+        {projects.length > 0 && projects.map((p) => <ProjectCard project={p} key={p.id} />)}
+        {loading && (
+          <span className='projects-loading-status'>
+            <div className='loader'></div>
+          </span>
+        )}
+        {error && (
+          <span className='projects-loading-status'>
+            <span className='error'>Wystąpił błąd. Spróbuj ponownie później.</span>
+          </span>
+        )}
       </Style.Carousel>
       <Style.GithubLink href='https://github.com/CandyyPL' target='_blank'>
         <img className='github-icon' src={githubIcon} alt='github' />
@@ -32,6 +67,6 @@ const ProjectsSection = React.forwardRef((_, ref) => {
       </Style.GithubLink>
     </Style.ProjectsWrapper>
   )
-})
+}
 
 export default ProjectsSection

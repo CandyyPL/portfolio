@@ -6,31 +6,20 @@ import ProjectsSection from '@/components/sections/Projects/ProjectsSection.jsx'
 import AboutSection from '@/components/sections/About/AboutSection.jsx'
 import ContactSection from '@/components/sections/Contact/ContactSection.jsx'
 import Footer from '@/components/sections/Footer/Footer.jsx'
-import { useContext, useEffect, useRef } from 'react'
-import { ScrollContext } from '@/context/ScrollProvider.jsx'
+import { useRef } from 'react'
 
 const App = () => {
-  const { setProjectsRef, setAboutRef, setContactRef } = useContext(ScrollContext)
-
-  const projectsRef = useRef(null)
-  const aboutRef = useRef(null)
   const contactRef = useRef(null)
-
-  useEffect(() => {
-    setProjectsRef(projectsRef)
-    setAboutRef(aboutRef)
-    setContactRef(contactRef)
-  }, [projectsRef, aboutRef, contactRef])
 
   return (
     <>
       <Background />
-      <Topbar />
+      {/* <Topbar /> */}
       <Content>
         <section className='sections'>
-          <HeroSection />
-          <ProjectsSection ref={projectsRef} />
-          <AboutSection ref={aboutRef} />
+          <HeroSection contactRef={contactRef} />
+          <ProjectsSection />
+          <AboutSection />
           <ContactSection ref={contactRef} />
         </section>
       </Content>

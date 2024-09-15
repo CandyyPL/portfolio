@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden !important;
 
     font-family: 'Outfit', sans-serif;
+
+    scroll-behavior: smooth;
   }
 
   button {

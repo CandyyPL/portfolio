@@ -55,6 +55,7 @@ const HamburgerLine = styled.span`
   height: 3px;
 
   background-color: ${(props) => (props.isActive ? 'transparent' : props.theme.colors.light)};
+  border-radius: 10px;
 
   position: relative;
 
@@ -66,6 +67,7 @@ const HamburgerLine = styled.span`
     height: 3px;
 
     background-color: ${({ theme }) => theme.colors.light};
+    border-radius: 10px;
 
     position: absolute;
     top: 0;

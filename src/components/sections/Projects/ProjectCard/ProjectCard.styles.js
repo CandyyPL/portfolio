@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const CardWrapper = styled.article`
+const CardWrapper = styled.a`
   min-width: 280px;
   max-width: 400px;
 
@@ -13,6 +13,47 @@ const CardWrapper = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  position: relative;
+
+  /* &::before {
+    content: '';
+
+    width: 99%;
+    height: 99%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+
+    background-color: transparent;
+
+    border-top: 2px solid ${({ theme }) => theme.colors.light};
+    border-right: 2px solid ${({ theme }) => theme.colors.light};
+
+    // border-top-right-radius: 10px;
+
+    transition: transform 0.2s;
+  } */
+
+  transition: all 0.2s;
+
+  &:hover {
+    &::before {
+      transform: translate(-48%, -52%);
+    }
+
+    background-color: ${({ theme }) => theme.colors.bg};
+    box-shadow: 0px 0px 25px black;
+  }
 `
 
 const Image = styled.section`
@@ -22,7 +63,8 @@ const Image = styled.section`
     width: 100%;
     height: 100%;
 
-    border-radius: 10px 10px 0 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 `
 
@@ -50,8 +92,8 @@ const Header = styled.header`
   margin-top: 10px;
 
   h1.project-title {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 32px;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.light};
 
