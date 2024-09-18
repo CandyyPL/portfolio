@@ -13,6 +13,10 @@ const ProjectsWrapper = styled.section`
   h1.projects-header {
     width: 100%;
 
+    @media screen and (width < 960px) {
+      margin-bottom: 40px;
+    }
+
     font-size: 32px;
     line-height: 32px;
     font-weight: 600;
@@ -73,6 +77,11 @@ const Carousel = styled.section`
   align-items: center;
   flex-wrap: wrap;
   gap: 32px;
+
+  /* flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory; */
 
   .projects-loading-status {
     .error {

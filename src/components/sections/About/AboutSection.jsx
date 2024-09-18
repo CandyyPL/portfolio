@@ -1,10 +1,11 @@
 import profileImg from '@/assets/img/profile2.png'
 import Style from './AboutSection.styles.js'
 import IconList from '@/helpers/icons.js'
+import React from 'react'
 
-const AboutSection = () => {
+const AboutSection = React.forwardRef((_, ref) => {
   return (
-    <Style.AboutWrapper>
+    <Style.AboutWrapper ref={ref}>
       <h1 className='about-header'>
         Kilka słów <span className='text-accent'>o mnie</span>.
       </h1>
@@ -41,6 +42,6 @@ const AboutSection = () => {
       </Style.Techs>
     </Style.AboutWrapper>
   )
-}
+})
 
 export default AboutSection

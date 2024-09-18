@@ -3,8 +3,8 @@ import styled from 'styled-components'
 const ContentWrapper = styled.main`
   width: min(90%, 1600px);
 
-  /* padding: 25px 0; */
   margin: 0 auto;
+  padding-bottom: 25px;
 
   display: flex;
   flex-direction: column;

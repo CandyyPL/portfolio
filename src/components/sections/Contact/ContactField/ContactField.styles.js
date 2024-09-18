@@ -52,6 +52,9 @@ const TextareaField = styled.textarea`
 
   @media screen and (width >= 640px) {
     height: 175px;
+
+    font-size: 18px;
+    line-height: 24px;
   }
 
   display: block;

@@ -2,7 +2,7 @@ import ProjectCard from '@/components/sections/Projects/ProjectCard/ProjectCard.
 import Style from './ProjectsSection.style.js'
 import githubIcon from '@/assets/icons/github-mark.png'
 import { useQuery } from 'graphql-hooks'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const QUERY = `
   query Projects {
@@ -27,7 +27,7 @@ const QUERY = `
   }
 `
 
-const ProjectsSection = () => {
+const ProjectsSection = React.forwardRef((_, ref) => {
   const { loading, error, data } = useQuery(QUERY)
 
   const [projects, setProjects] = useState([])
@@ -39,15 +39,15 @@ const ProjectsSection = () => {
   }, [data])
 
   return (
-    <Style.ProjectsWrapper>
+    <Style.ProjectsWrapper ref={ref}>
       <h1 className='projects-header'>
         A oto kilka moich <span className='text-accent'>projektów</span>..
       </h1>
-      <Style.CarouselIndicator>
+      {/* <Style.CarouselIndicator>
         <div className='carousel-indicator-dot'></div>
         <div className='carousel-indicator-dot'></div>
         <div className='carousel-indicator-dot'></div>
-      </Style.CarouselIndicator>
+      </Style.CarouselIndicator> */}
       <Style.Carousel>
         {projects.length > 0 && projects.map((p) => <ProjectCard project={p} key={p.id} />)}
         {loading && (
@@ -67,6 +67,6 @@ const ProjectsSection = () => {
       </Style.GithubLink>
     </Style.ProjectsWrapper>
   )
-}
+})
 
 export default ProjectsSection

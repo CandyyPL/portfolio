@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const CardWrapper = styled.a`
+const CardWrapper = styled.article`
   min-width: 280px;
   max-width: 400px;
 
@@ -14,11 +14,13 @@ const CardWrapper = styled.a`
   flex-direction: column;
   justify-content: space-between;
 
-  text-decoration: none;
+  /* scroll-snap-align: start; */
+
+  /* text-decoration: none;
 
   cursor: pointer;
 
-  position: relative;
+  position: relative; */
 
   /* &::before {
     content: '';
@@ -44,7 +46,7 @@ const CardWrapper = styled.a`
     transition: transform 0.2s;
   } */
 
-  transition: all 0.2s;
+  /* transition: all 0.2s;
 
   &:hover {
     &::before {
@@ -53,7 +55,7 @@ const CardWrapper = styled.a`
 
     background-color: ${({ theme }) => theme.colors.bg};
     box-shadow: 0px 0px 25px black;
-  }
+  } */
 `
 
 const Image = styled.section`
@@ -134,6 +136,69 @@ const Techs = styled.section`
   }
 `
 
+const Link = styled.a`
+  width: 125px;
+  height: 40px;
+
+  background-color: ${({ theme }) => theme.colors.yellow};
+
+  text-decoration: none;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: black;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 1;
+
+  transition: background-color 0.2s;
+  transition: transform 0.2s;
+
+  .project-link-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &::before {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: transparent;
+
+    transition: background-color 0.2s;
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.yellowDim};
+
+    color: ${({ theme }) => theme.colors.light};
+
+    transform: translate(-4px, 4px);
+
+    &::before {
+      transform: translate(8px, -8px);
+
+      border-top: 2px solid ${({ theme }) => theme.colors.light};
+      border-right: 2px solid ${({ theme }) => theme.colors.light};
+    }
+  }
+`
+
 export default {
   CardWrapper,
   Image,
@@ -142,4 +207,5 @@ export default {
   Header,
   Summary,
   Techs,
+  Link,
 }

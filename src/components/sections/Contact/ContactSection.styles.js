@@ -104,6 +104,92 @@ const ContactForm = styled.form`
       flex-direction: row;
     }
   }
+
+  position: relative;
+
+  .sending-status {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: none;
+
+    transition: all 0.2s;
+
+    .pending,
+    .sent {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+
+      background-color: #666a;
+
+      display: none;
+    }
+
+    .pending {
+      --color: ${({ theme }) => theme.colors.light};
+
+      .loader {
+        width: 60px;
+        aspect-ratio: 2;
+        --_g: no-repeat radial-gradient(circle closest-side, var(--color) 90%, #0000);
+        background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+        background-size: calc(100% / 3) 50%;
+        animation: l3 1s infinite linear;
+      }
+
+      @keyframes l3 {
+        20% {
+          background-position: 0% 0%, 50% 50%, 100% 50%;
+        }
+        40% {
+          background-position: 0% 100%, 50% 0%, 100% 50%;
+        }
+        60% {
+          background-position: 0% 50%, 50% 100%, 100% 0%;
+        }
+        80% {
+          background-position: 0% 50%, 50% 50%, 100% 100%;
+        }
+      }
+    }
+
+    .sent {
+      img {
+        height: 128px;
+      }
+    }
+  }
+
+  &.sending-pending {
+    .sending-status {
+      display: block;
+
+      .pending {
+        display: flex;
+      }
+    }
+  }
+
+  &.sending-sent {
+    .sending-status {
+      display: block;
+
+      .sent {
+        display: flex;
+      }
+    }
+  }
 `
 
 const Button = styled.button`
