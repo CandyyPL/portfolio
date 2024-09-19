@@ -6,6 +6,7 @@ import ReactIcon from '@/assets/icons/react-original.svg?react'
 import ReduxIcon from '@/assets/icons/redux-original.svg?react'
 import SassIcon from '@/assets/icons/sass-original.svg?react'
 import TypescriptIcon from '@/assets/icons/typescript-plain.svg?react'
+import SupabaseIcon from '@/assets/icons/supabase-plain.svg?react'
 
 export default [
   {
@@ -37,6 +38,11 @@ export default [
     name: 'sass',
     displayName: 'Sass',
     icon: SassIcon,
+  },
+  {
+    name: 'supabase',
+    displayName: 'Supabase',
+    icon: SupabaseIcon,
   },
   {
     name: 'sql',

@@ -2,6 +2,7 @@ import profileImg from '@/assets/img/profile2.png'
 import Style from './AboutSection.styles.js'
 import IconList from '@/helpers/icons.js'
 import React from 'react'
+import Reveal from '@/components/Reveal/Reveal.jsx'
 
 const AboutSection = React.forwardRef((_, ref) => {
   return (
@@ -32,11 +33,13 @@ const AboutSection = React.forwardRef((_, ref) => {
           <span className='text-accent'>Technologie</span> z którymi pracuję.
         </h1>
         <Style.TechList>
-          {IconList.map((i) => (
-            <figure className='tech' key={i.name}>
-              <i.icon className='icon' />
-              <span className='tech-name'>{i.displayName}</span>
-            </figure>
+          {IconList.map((elm, i) => (
+            <Reveal length={30} delay={0.5 + i * 0.15} key={elm.name}>
+              <figure className='tech'>
+                <elm.icon className='icon' />
+                <span className='tech-name'>{elm.displayName}</span>
+              </figure>
+            </Reveal>
           ))}
         </Style.TechList>
       </Style.Techs>

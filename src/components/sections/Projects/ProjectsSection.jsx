@@ -3,6 +3,7 @@ import Style from './ProjectsSection.style.js'
 import githubIcon from '@/assets/icons/github-mark.png'
 import { useQuery } from 'graphql-hooks'
 import React, { useEffect, useState } from 'react'
+import Reveal from '@/components/Reveal/Reveal.jsx'
 
 const QUERY = `
   query Projects {
@@ -49,7 +50,12 @@ const ProjectsSection = React.forwardRef((_, ref) => {
         <div className='carousel-indicator-dot'></div>
       </Style.CarouselIndicator> */}
       <Style.Carousel>
-        {projects.length > 0 && projects.map((p) => <ProjectCard project={p} key={p.id} />)}
+        {projects.length > 0 &&
+          projects.map((p, i) => (
+            <Reveal length={40} delay={0.5 + i * 0.15} key={p.id}>
+              <ProjectCard project={p} />
+            </Reveal>
+          ))}
         {loading && (
           <span className='projects-loading-status'>
             <div className='loader'></div>

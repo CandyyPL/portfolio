@@ -60,6 +60,20 @@ const EmailIcon = styled.section`
   img.contact-icon {
     width: 100%;
   }
+
+  animation: float 4s infinite ease-in-out;
+
+  @keyframes float {
+    0% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(-15px);
+    }
+  }
 `
 
 const ContactForm = styled.form`

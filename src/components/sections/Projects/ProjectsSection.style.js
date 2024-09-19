@@ -13,6 +13,8 @@ const ProjectsWrapper = styled.section`
   h1.projects-header {
     width: 100%;
 
+    margin: 0 auto;
+
     @media screen and (width < 960px) {
       margin-bottom: 40px;
     }
