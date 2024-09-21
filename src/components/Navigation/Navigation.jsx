@@ -36,22 +36,22 @@ const Navigation = () => {
   return (
     <Style.NavWrapper>
       <Style.NavList>
-        <Reveal length={40} delay={1} mobile={false}>
+        {/* <Reveal length={40} delay={1} mobile={false}>
           <Style.NavItem onClick={(e) => handleScroll(e)} data-section='0'>
             witaj
           </Style.NavItem>
-        </Reveal>
-        <Reveal length={40} delay={1.1} mobile={false}>
+        </Reveal> */}
+        <Reveal length={40} delay={1} mobile={false}>
           <Style.NavItem onClick={(e) => handleScroll(e)} data-section='1'>
             projekty
           </Style.NavItem>
         </Reveal>
-        <Reveal length={40} delay={1.2} mobile={false}>
+        <Reveal length={40} delay={1.1} mobile={false}>
           <Style.NavItem onClick={(e) => handleScroll(e)} data-section='2'>
             o mnie
           </Style.NavItem>
         </Reveal>
-        <Reveal length={40} delay={1.3} mobile={false}>
+        <Reveal length={40} delay={1.2} mobile={false}>
           <Style.NavItem className='contact' onClick={(e) => handleScroll(e)} data-section='3'>
             kontakt
           </Style.NavItem>
