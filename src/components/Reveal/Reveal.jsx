@@ -1,3 +1,4 @@
+import useMediaQuery from '@/hooks/useMediaQuery.js'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
@@ -13,7 +14,7 @@ const Reveal = ({
   const [dir, setDir] = useState({})
   const [loading, setLoading] = useState(true)
 
-  const [isMobileWidth, setIsMobileWidth] = useState(window.matchMedia('(width < 1280px)').matches)
+  const isMobileWidth = useMediaQuery('width < 1280px')
 
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
@@ -21,10 +22,6 @@ const Reveal = ({
   const controls = useAnimation()
 
   useEffect(() => {
-    window
-      .matchMedia('(min-width: 768px)')
-      .addEventListener('change', (e) => setIsMobileWidth(e.matches))
-
     const xZero = { x: 0 }
     const yZero = { y: 0 }
 

@@ -52,7 +52,7 @@ const ProjectsSection = React.forwardRef((_, ref) => {
       <Style.Carousel>
         {projects.length > 0 &&
           projects.map((p, i) => (
-            <Reveal length={40} delay={0.5 + i * 0.15} key={p.id}>
+            <Reveal length={40} delay={0.2 + i * 0.15} key={p.id}>
               <ProjectCard project={p} />
             </Reveal>
           ))}

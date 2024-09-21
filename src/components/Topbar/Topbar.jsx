@@ -16,7 +16,7 @@ const Topbar = () => {
   return (
     <Style.TopbarWrapper>
       <Style.NavBox ref={navRef}>
-        <Navigation />
+        <Navigation toggleNav={toggleNavigation} />
       </Style.NavBox>
       <Style.Mobile>
         <Style.Hamburger onClick={() => toggleNavigation()}>

@@ -7,6 +7,8 @@ const ContactWrapper = styled.section`
   align-items: center;
   gap: 60px;
 
+  padding-top: 20px;
+
   @media screen and (width >= 1280px) {
     margin-bottom: 100px;
   }

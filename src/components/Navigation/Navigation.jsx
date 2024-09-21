@@ -2,14 +2,19 @@ import { useContext } from 'react'
 import Style from './Navigation.styles.js'
 import { ScrollContext } from '@/providers/ScrollProvider.jsx'
 import Reveal from '@/components/Reveal/Reveal.jsx'
+import useMediaQuery from '@/hooks/useMediaQuery.js'
 
-const Navigation = () => {
+const Navigation = ({ toggleNav }) => {
   const { projectsRef, aboutRef, contactRef } = useContext(ScrollContext)
 
+  const isMobileWidth = useMediaQuery('width < 1280px')
+
   const handleScroll = (e) => {
+    if (isMobileWidth) toggleNav()
+
     const section = e.currentTarget.dataset.section
 
-    const options = { behaviour: 'smooth', block: 'center' }
+    const options = { behaviour: 'smooth', block: 'start' }
 
     switch (section) {
       case '0':

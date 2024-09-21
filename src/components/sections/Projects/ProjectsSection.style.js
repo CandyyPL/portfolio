@@ -6,6 +6,8 @@ const ProjectsWrapper = styled.section`
   justify-content: center;
   align-items: center;
 
+  padding-top: 20px;
+
   @media screen and (width >= 960px) {
     gap: 60px;
   }

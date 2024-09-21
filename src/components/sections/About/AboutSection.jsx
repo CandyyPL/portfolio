@@ -34,7 +34,7 @@ const AboutSection = React.forwardRef((_, ref) => {
         </h1>
         <Style.TechList>
           {IconList.map((elm, i) => (
-            <Reveal length={30} delay={0.5 + i * 0.15} key={elm.name}>
+            <Reveal length={30} delay={0.2 + i * 0.15} key={elm.name}>
               <figure className='tech'>
                 <elm.icon className='icon' />
                 <span className='tech-name'>{elm.displayName}</span>

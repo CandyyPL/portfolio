@@ -7,6 +7,8 @@ const AboutWrapper = styled.section`
   align-items: center;
   gap: 60px;
 
+  padding-top: 20px;
+
   h1.about-header {
     width: 100%;
 
