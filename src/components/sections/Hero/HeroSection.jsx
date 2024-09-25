@@ -1,6 +1,6 @@
-import profileImg from '@/assets/img/profile.png'
-import Style from './HeroSection.styles.js'
 import Reveal from '@/components/Reveal/Reveal.jsx'
+import profileImg from '@/assets/img/profile.webp'
+import Style from './HeroSection.styles.js'
 
 const HeroSection = (props) => {
   const scrollToContact = () => {

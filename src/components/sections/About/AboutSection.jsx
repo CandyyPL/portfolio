@@ -1,8 +1,8 @@
-import profileImg from '@/assets/img/profile2.png'
+import profileImg from '@/assets/img/profile2.webp'
+import Reveal from '@/components/Reveal/Reveal.jsx'
 import Style from './AboutSection.styles.js'
 import IconList from '@/helpers/icons.js'
 import React from 'react'
-import Reveal from '@/components/Reveal/Reveal.jsx'
 
 const AboutSection = React.forwardRef((_, ref) => {
   return (
