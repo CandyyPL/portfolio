@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import Style from './ContactField.styles.js'
+import React, { useState } from 'react'
 
 const ContactField = React.forwardRef((props, ref) => {
   const { fieldName, fieldType, labelName, size, reg } = props

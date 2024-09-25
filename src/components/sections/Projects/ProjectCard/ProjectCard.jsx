@@ -1,6 +1,6 @@
+import LinkIcon from '@/assets/icons/link.svg?react'
 import Style from './ProjectCard.styles.js'
 import IconList from '@/helpers/icons.js'
-import LinkIcon from '@/assets/icons/link.svg?react'
 
 const ProjectCard = ({ project }) => {
   return (

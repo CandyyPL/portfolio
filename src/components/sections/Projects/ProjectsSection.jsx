@@ -1,9 +1,9 @@
 import ProjectCard from '@/components/sections/Projects/ProjectCard/ProjectCard.jsx'
-import Style from './ProjectsSection.style.js'
 import githubIcon from '@/assets/icons/github-mark.png'
-import { useQuery } from 'graphql-hooks'
-import React, { useEffect, useState } from 'react'
 import Reveal from '@/components/Reveal/Reveal.jsx'
+import React, { useEffect, useState } from 'react'
+import Style from './ProjectsSection.style.js'
+import { useQuery } from 'graphql-hooks'
 
 const QUERY = `
   query Projects {

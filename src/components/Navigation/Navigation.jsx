@@ -1,8 +1,8 @@
-import { useContext } from 'react'
-import Style from './Navigation.styles.js'
 import { ScrollContext } from '@/providers/ScrollProvider.jsx'
-import Reveal from '@/components/Reveal/Reveal.jsx'
 import useMediaQuery from '@/hooks/useMediaQuery.js'
+import Reveal from '@/components/Reveal/Reveal.jsx'
+import Style from './Navigation.styles.js'
+import { useContext } from 'react'
 
 const Navigation = ({ toggleNav }) => {
   const { projectsRef, aboutRef, contactRef } = useContext(ScrollContext)

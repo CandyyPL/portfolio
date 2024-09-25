@@ -1,5 +1,5 @@
-import useMediaQuery from '@/hooks/useMediaQuery.js'
 import { motion, useAnimation, useInView } from 'framer-motion'
+import useMediaQuery from '@/hooks/useMediaQuery.js'
 import { useEffect, useRef, useState } from 'react'
 
 const Reveal = ({

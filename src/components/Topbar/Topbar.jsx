@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation/Navigation.jsx'
-import Style from './Topbar.styles.js'
 import { useRef, useState } from 'react'
+import Style from './Topbar.styles.js'
 
 const Topbar = () => {
   const navRef = useRef(null)

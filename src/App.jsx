@@ -1,13 +1,13 @@
+import ProjectsSection from '@/components/sections/Projects/ProjectsSection.jsx'
+import ContactSection from '@/components/sections/Contact/ContactSection.jsx'
+import AboutSection from '@/components/sections/About/AboutSection.jsx'
 import HeroSection from '@/components/sections/Hero/HeroSection.jsx'
 import Background from '@/components/Background/Background.jsx'
-import Content from '@/components/Content/Content.jsx'
-import Topbar from '@/components/Topbar/Topbar.jsx'
-import ProjectsSection from '@/components/sections/Projects/ProjectsSection.jsx'
-import AboutSection from '@/components/sections/About/AboutSection.jsx'
-import ContactSection from '@/components/sections/Contact/ContactSection.jsx'
-import Footer from '@/components/sections/Footer/Footer.jsx'
-import { useContext, useEffect, useRef } from 'react'
 import { ScrollContext } from '@/providers/ScrollProvider.jsx'
+import Footer from '@/components/sections/Footer/Footer.jsx'
+import Content from '@/components/Content/Content.jsx'
+import { useContext, useEffect, useRef } from 'react'
+import Topbar from '@/components/Topbar/Topbar.jsx'
 
 const App = () => {
   const { setProjectsRef, setAboutRef, setContactRef } = useContext(ScrollContext)
