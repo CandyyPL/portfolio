@@ -20,7 +20,7 @@ export default function Topbar() {
             'translate-x-full': !isHamburgerOpen,
           }
         )}>
-        <Navigation />
+        <Navigation toggleNav={toggleHamburgerNav} />
       </div>
       <button
         onClick={toggleHamburgerNav}

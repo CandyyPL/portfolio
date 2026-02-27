@@ -1,7 +1,9 @@
+import { SECTIONS } from '@/lib/constants.ts';
+
 export default function Hero() {
   return (
     <section
-      id='welcome'
+      id={SECTIONS.HERO}
       className='flex flex-col items-center justify-center gap-6'>
       <div>
         <h3 className='text-light-dim text-lg'>Cześć, jestem</h3>
