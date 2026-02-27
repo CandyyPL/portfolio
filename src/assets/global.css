@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/outfit';
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-outfit: 'Outfit Variable', sans-serif;
+
+  --color-dark: #00010d;
+  --color-background: #12130f;
+  --color-background-gray: #34352f;
+  --color-light-dim: #c1c4c3;
+  --color-light: #f4f6f5;
+  --color-yellow: #fddd0b;
+}
