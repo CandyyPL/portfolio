@@ -1,6 +1,8 @@
 export default function Hero() {
   return (
-    <section className='flex flex-col items-center justify-center gap-6'>
+    <section
+      id='welcome'
+      className='flex flex-col items-center justify-center gap-6'>
       <div>
         <h3 className='text-light-dim text-lg'>Cześć, jestem</h3>
         <h1 className='text-light text-[5rem] font-medium'>Marcel.</h1>

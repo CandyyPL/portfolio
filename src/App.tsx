@@ -7,7 +7,7 @@ export default function App() {
     <>
       <Background />
       <Topbar />
-      <main className='flex flex-col items-center justify-start p-4'>
+      <main className='flex flex-col items-center justify-start gap-20 p-4'>
         <Hero />
       </main>
     </>
