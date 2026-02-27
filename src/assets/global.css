@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/outfit';
+@import '@fontsource/poppins/400-italic.css';
 
 :root {
   font-synthesis: none;
@@ -12,6 +13,7 @@
 
 @theme {
   --font-outfit: 'Outfit Variable', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
 
   --color-dark: hsl(235, 100%, 3%);
   --color-background: hsl(75, 12%, 7%);
@@ -41,8 +43,8 @@
 }
 
 @layer components {
-  .hamburger-line-active {
-    @apply hamburger-line bg-transparent! before:translate-y-0! after:translate-y-0!;
+  .section-heading {
+    @apply text-light text-4xl font-medium;
   }
 }
 
@@ -82,6 +84,8 @@
 }
 
 @utility hamburger-line-active {
+  background-color: transparent;
+
   &::before {
     transform: translateY(0) rotate(45deg);
   }
