@@ -22,7 +22,7 @@ export default function Background() {
     () => ({
       background: {
         color: {
-          value: '#00010d',
+          value: '#12130f',
         },
       },
       fpsLimit: 30,
@@ -65,6 +65,7 @@ export default function Background() {
       <Particles
         id='tsparticles'
         options={options}
+        className='relative -z-10'
       />
     );
   }

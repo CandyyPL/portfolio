@@ -6,15 +6,69 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Outfit Variable', sans-serif;
 }
 
 @theme {
   --font-outfit: 'Outfit Variable', sans-serif;
 
-  --color-dark: #00010d;
-  --color-background: #12130f;
-  --color-background-gray: #34352f;
-  --color-light-dim: #c1c4c3;
-  --color-light: #f4f6f5;
-  --color-yellow: #fddd0b;
+  --color-dark: hsl(235, 100%, 3%);
+  --color-background: hsl(75, 12%, 7%);
+  --color-background-gray: hsl(70, 6%, 20%);
+  --color-light-dim: hsl(160, 2%, 76%);
+  --color-light: hsl(150, 10%, 96%);
+  --color-yellow: hsl(52, 98%, 52%);
+  --color-yellow-dim: hsl(52, 98%, 42%);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden !important;
+  }
+
+  body.nav-active {
+    overflow-y: hidden !important;
+    position: fixed;
+  }
+}
+
+@utility hamburger-line {
+  width: 100%;
+  height: 3px;
+
+  background-color: var(--color-light);
+  border-radius: 10px;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--color-light);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: '';
+  }
+
+  &::before {
+    transform: translateY(-10px);
+  }
+
+  &::after {
+    transform: translateY(10px);
+  }
 }
