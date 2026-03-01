@@ -1,5 +1,6 @@
 import { SECTIONS } from '@/lib/constants.ts';
 import quoteIcon from '@/assets/icons/quote-white.png';
+import TechStack from '@/components/TechStack.tsx';
 
 export default function About() {
   return (
@@ -28,13 +29,15 @@ export default function About() {
           Konfucjusz
         </p>
       </div>
-      <p className='text-light text-center text-lg leading-tight'>
+      <p className='text-light px-4 text-center text-lg leading-tight'>
         W pełni zgadzam się z tymi słowami. Programowanie to moja pasja, którą
         rozwijam od wielu lat, dlatego postanowiłem uczynić z tego swoją ścieżkę
-        zawodową. Kodowanie to nie tylko moje hobby, ale również styl życia,
-        który daje mi niesamowitą satysfakcję i nieustannie inspiruje do
-        rozwoju, a w niedługiej przyszłości stanie się również moją pracą.
+        zawodową. <br /> <br /> Kodowanie to nie tylko moje hobby, ale również
+        styl życia, który daje mi niesamowitą satysfakcję i nieustannie
+        inspiruje do rozwoju, a w niedługiej przyszłości stanie się również moją
+        pracą.
       </p>
+      <TechStack />
     </section>
   );
 }
