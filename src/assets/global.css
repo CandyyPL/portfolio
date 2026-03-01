@@ -46,6 +46,18 @@
   .section-heading {
     @apply text-light text-4xl font-medium;
   }
+
+  .field-wrapper {
+    @apply text-dark flex w-full flex-col items-start gap-1 text-xl;
+  }
+
+  .form-input {
+    @apply bg-light yellow-shadow-box border-dark relative h-10 w-full border-2 px-2 py-2;
+  }
+
+  .input-error {
+    @apply text-sm text-red-500;
+  }
 }
 
 @utility hamburger-line {
@@ -93,4 +105,8 @@
   &::after {
     transform: translateY(0) rotate(-45deg);
   }
+}
+
+@utility yellow-shadow-box {
+  box-shadow: -5px 5px 0 0 var(--color-yellow);
 }
