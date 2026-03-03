@@ -1,10 +1,6 @@
-import { SECTIONS } from '@/lib/constants.ts';
-
 export default function Hero() {
   return (
-    <section
-      id={SECTIONS.HERO}
-      className='flex w-full flex-col items-center justify-start gap-6 md:flex-row md:items-center md:justify-around'>
+    <section className='flex w-full flex-col items-center justify-start gap-6 md:flex-row md:items-center md:justify-around'>
       <div className='w-full md:w-fit'>
         <h3 className='text-light-dim text-lg lg:text-xl xl:text-3xl'>
           Cześć, jestem

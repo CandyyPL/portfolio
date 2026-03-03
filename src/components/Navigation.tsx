@@ -23,11 +23,6 @@ export default function Navigation({ toggleNav }: Props) {
 
   return (
     <nav className='md:text-light flex flex-col items-center justify-center gap-8 text-3xl md:flex-row md:text-xl'>
-      {/*<div*/}
-      {/*  onClick={() => handleScroll(SECTIONS.HERO)}*/}
-      {/*  className='cursor-pointer'>*/}
-      {/*  witaj*/}
-      {/*</div>*/}
       <div
         onClick={() => handleScroll(SECTIONS.PROJECTS)}
         className='cursor-pointer'>
