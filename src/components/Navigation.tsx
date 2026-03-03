@@ -35,7 +35,7 @@ export default function Navigation({ toggleNav }: Props) {
       </div>
       <div
         onClick={() => handleScroll(SECTIONS.CONTACT)}
-        className='bg-yellow text-dark cursor-pointer px-10 py-4 md:px-6 md:py-2'>
+        className='bg-yellow text-dark hover:bg-yellow-dim transition-bg cursor-pointer px-10 py-4 duration-200 md:px-6 md:py-2'>
         kontakt
       </div>
     </nav>

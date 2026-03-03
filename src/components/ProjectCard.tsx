@@ -16,7 +16,7 @@ export default function ProjectCard() {
             corporis doloremque explicabo fuga illo natus officiis provident
             velit?
           </p>
-          <button className='bg-yellow text-dark w-full px-6 py-2 text-lg'>
+          <button className='bg-yellow hover:bg-yellow-dim transition-bg text-dark w-full cursor-pointer px-6 py-2 text-lg duration-200'>
             Czytaj więcej
           </button>
         </div>

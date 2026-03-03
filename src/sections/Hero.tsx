@@ -1,4 +1,15 @@
 export default function Hero() {
+  const handleScrollToContact = () => {
+    const contact = document.getElementById('contact');
+
+    const scrollOptions: ScrollIntoViewOptions = {
+      behavior: 'smooth',
+      block: 'center',
+    };
+
+    contact?.scrollIntoView(scrollOptions);
+  };
+
   return (
     <section className='flex w-full flex-col items-center justify-start gap-6 md:flex-row md:items-center md:justify-around'>
       <div className='w-full md:w-fit'>
@@ -15,7 +26,9 @@ export default function Hero() {
           </span>
           .
         </h2>
-        <button className='bg-yellow my-4 flex h-15 items-center justify-center px-4 py-2 text-lg font-semibold lg:px-6 lg:py-8 lg:text-xl xl:px-8 xl:py-10 xl:text-2xl'>
+        <button
+          onClick={() => handleScrollToContact()}
+          className='bg-yellow hover:bg-yellow-dim transition-bg my-4 flex h-15 cursor-pointer items-center justify-center px-4 py-2 text-lg font-semibold duration-200 lg:px-6 lg:py-8 lg:text-xl xl:px-8 xl:py-10 xl:text-2xl'>
           NAPISZ DO MNIE
         </button>
       </div>
