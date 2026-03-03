@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id={SECTIONS.ABOUT}
-      className='flex w-full flex-col items-center gap-4 md:gap-8 lg:gap-12'>
+      className='flex w-full flex-col items-center gap-4 md:gap-8 xl:gap-12'>
       <h1 className='section-heading text-center lg:w-full lg:pr-10 lg:text-end'>
         Kilka słów <span className='text-yellow'>o mnie</span>.
       </h1>
