@@ -43,6 +43,10 @@
 }
 
 @layer components {
+  .main-content {
+    @apply max-width mx-auto flex flex-col items-center justify-start gap-20 p-4 md:gap-40 xl:gap-80;
+  }
+
   .section-heading {
     @apply text-light text-4xl font-medium md:text-5xl lg:text-6xl;
   }
@@ -113,4 +117,8 @@
 
 @utility yellow-shadow-box {
   box-shadow: -5px 5px 0 0 var(--color-yellow);
+}
+
+@utility max-width {
+  width: min(90%, 1600px);
 }
