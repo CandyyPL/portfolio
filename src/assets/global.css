@@ -44,7 +44,7 @@
 
 @layer components {
   .section-heading {
-    @apply text-light text-4xl font-medium;
+    @apply text-light text-4xl font-medium md:text-6xl;
   }
 
   .field-wrapper {

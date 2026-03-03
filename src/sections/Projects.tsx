@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section
       id={SECTIONS.PROJECTS}
-      className='flex w-full flex-col items-center gap-4'>
+      className='flex w-full flex-col items-center gap-4 md:gap-12'>
       <h1 className='section-heading text-center'>
         A oto kilka moich <span className='text-yellow'>projektów</span>..
       </h1>
