@@ -46,7 +46,9 @@ export default function TechStack() {
       </h1>
       <ul className='mt-4 flex flex-row flex-wrap items-center justify-center gap-8'>
         {ICONS.map((icon) => (
-          <li className='text-light flex h-18 w-20 flex-col items-center gap-2 font-medium'>
+          <li
+            key={icon.name}
+            className='text-light flex h-18 w-20 flex-col items-center gap-2 font-medium'>
             <img
               src={icon.icon}
               alt={icon.name}
