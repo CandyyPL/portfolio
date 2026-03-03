@@ -4,6 +4,7 @@ import Topbar from '@/components/Topbar.tsx';
 import Projects from '@/components/Projects.tsx';
 import About from '@/components/About.tsx';
 import Contact from '@/components/Contact.tsx';
+import Footer from '@/components/Footer.tsx';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <About />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
