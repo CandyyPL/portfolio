@@ -9,7 +9,7 @@ export default function Projects() {
       <h1 className='section-heading text-center'>
         A oto kilka moich <span className='text-yellow'>projektów</span>..
       </h1>
-      <ul className='flex flex-col items-center gap-8'>
+      <ul className='flex flex-col items-center gap-8 md:w-full md:flex-row md:flex-wrap md:justify-center'>
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
