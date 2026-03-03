@@ -58,6 +58,10 @@
   .input-error {
     @apply text-sm text-red-500;
   }
+
+  .topbar {
+    @apply flex h-18 flex-row items-center justify-end overflow-hidden px-4 md:mb-10 md:h-22 md:px-8 lg:p-14 xl:mb-18;
+  }
 }
 
 @utility hamburger-line {

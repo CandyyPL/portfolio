@@ -1,6 +1,6 @@
+import Navigation from '@/components/Navigation.tsx';
 import { useState } from 'react';
 import clsx from 'clsx';
-import Navigation from '@/components/Navigation.tsx';
 
 export default function Topbar() {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
@@ -11,7 +11,7 @@ export default function Topbar() {
   };
 
   return (
-    <header className='flex h-18 flex-row items-center justify-end overflow-hidden px-2 md:mt-6 md:mb-10 md:px-8'>
+    <header className='topbar'>
       <div
         className={clsx(
           'bg-dark text-light fixed top-0 left-0 z-11 flex h-full w-full items-center justify-center transition-transform duration-200 md:hidden',
