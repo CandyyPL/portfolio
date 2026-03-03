@@ -28,11 +28,11 @@ export default function Contact() {
   return (
     <section
       id={SECTIONS.CONTACT}
-      className='flex flex-col items-center gap-4'>
+      className='flex w-full flex-col items-center gap-4'>
       <h1 className='section-heading text-center'>
         <span className='text-yellow'>Skontaktuj się</span> ze mną.
       </h1>
-      <div className='bg-light-dim w-full'>
+      <div className='bg-light-dim w-full max-w-150'>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className='flex h-full w-full flex-col items-center gap-4 p-4'>
