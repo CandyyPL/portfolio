@@ -1,9 +1,9 @@
 import { SECTIONS } from '@/lib/constants.ts';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 const FormDataSchema = z.object({
-  name: z.string().min(3),
   email: z.email(),
   message: z.string().min(20),
 });
@@ -15,10 +15,14 @@ export default function Contact() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
+    reset,
+  } = useForm<FormData>({
+    resolver: zodResolver(FormDataSchema),
+  });
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+    reset();
   };
 
   return (
@@ -28,26 +32,10 @@ export default function Contact() {
       <h1 className='section-heading text-center'>
         <span className='text-yellow'>Skontaktuj się</span> ze mną.
       </h1>
-      <div className='bg-light-dim w-80'>
+      <div className='bg-light-dim w-full'>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='flex h-full w-full flex-col items-center gap-8 p-4'>
-          <div className='field-wrapper'>
-            <label
-              htmlFor='name'
-              className='ml-1'>
-              Imię
-            </label>
-            <input
-              type='text'
-              id='name'
-              className='form-input'
-              {...register('name')}
-            />
-            {errors.name && (
-              <p className='input-error'>{errors.name.message}</p>
-            )}
-          </div>
+          className='flex h-full w-full flex-col items-center gap-4 p-4'>
           <div className='field-wrapper'>
             <label
               htmlFor='email'
@@ -61,7 +49,7 @@ export default function Contact() {
               {...register('email')}
             />
             {errors.email && (
-              <p className='input-error'>{errors.email.message}</p>
+              <p className='input-error'>Niepoprawny adres e-mail.</p>
             )}
           </div>
           <div className='field-wrapper'>
@@ -71,10 +59,10 @@ export default function Contact() {
               className='form-input h-50 resize-none'
               {...register('message')}></textarea>
             {errors.message && (
-              <p className='input-error'>{errors.message.message}</p>
+              <p className='input-error'>Wpisz co najmniej 20 znaków.</p>
             )}
           </div>
-          <button className='bg-yellow h-14 w-30 text-xl font-medium'>
+          <button className='bg-yellow h-14 w-30 cursor-pointer text-xl font-medium'>
             WYŚLIJ
           </button>
         </form>
