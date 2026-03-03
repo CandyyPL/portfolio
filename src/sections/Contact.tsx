@@ -6,7 +6,7 @@ import emailIcon from '@/assets/icons/email.png';
 
 const FormDataSchema = z.object({
   email: z.email(),
-  message: z.string().min(20),
+  message: z.string().min(20).max(400),
 });
 
 type FormData = z.infer<typeof FormDataSchema>;
@@ -66,10 +66,10 @@ export default function Contact() {
                 className='form-input h-50 resize-none'
                 {...register('message')}></textarea>
               {errors.message && (
-                <p className='input-error'>Wpisz co najmniej 20 znaków.</p>
+                <p className='input-error'>Wpisz pomiędzy 20 a 400 znaków.</p>
               )}
             </div>
-            <button className='bg-yellow h-14 w-30 cursor-pointer text-xl font-medium'>
+            <button className='bg-yellow hover:bg-yellow-dim transition-bg h-14 w-30 cursor-pointer text-xl font-medium duration-200'>
               WYŚLIJ
             </button>
           </form>
