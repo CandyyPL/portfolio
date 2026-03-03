@@ -1,5 +1,6 @@
 import { SECTIONS } from '@/lib/constants.ts';
 import ProjectCard from '@/components/ProjectCard.tsx';
+import githubIcon from '@/assets/icons/github-mark.png';
 
 export default function Projects() {
   return (
@@ -14,6 +15,19 @@ export default function Projects() {
         <ProjectCard />
         <ProjectCard />
       </ul>
+      <button className='bg-yellow text-dark hover:bg-yellow-dim transition-bg px-4 py-2 text-xl duration-200'>
+        <a
+          href='https://github.com/CandyyPL'
+          target='_blank'
+          className='flex items-center justify-center gap-4'>
+          <img
+            src={githubIcon}
+            alt='github'
+            className='size-8'
+          />
+          Zobacz więcej
+        </a>
+      </button>
     </section>
   );
 }
