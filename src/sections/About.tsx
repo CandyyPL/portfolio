@@ -1,6 +1,6 @@
 import { SECTIONS } from '@/lib/constants.ts';
 import quoteIcon from '@/assets/icons/quote-white.png';
-import TechStack from '@/components/TechStack.tsx';
+import TechStack from '@/sections/TechStack.tsx';
 
 export default function About() {
   return (
