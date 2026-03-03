@@ -4,12 +4,12 @@ export default function Hero() {
   return (
     <section
       id={SECTIONS.HERO}
-      className='flex w-full flex-col items-center justify-start gap-6 md:flex-row md:items-center md:justify-around xl:justify-between'>
+      className='flex w-full flex-col items-center justify-start gap-6 md:flex-row md:items-center md:justify-around'>
       <div className='w-full md:w-fit'>
         <h3 className='text-light-dim text-lg lg:text-xl xl:text-3xl'>
           Cześć, jestem
         </h3>
-        <h1 className='text-light text-[5rem] font-medium lg:text-8xl xl:text-9xl'>
+        <h1 className='text-light text-[5rem] font-medium lg:text-8xl xl:my-4 xl:text-9xl'>
           Marcel.
         </h1>
         <h2 className='text-light text-4xl font-semibold lg:text-5xl xl:text-7xl'>
