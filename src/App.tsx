@@ -11,7 +11,7 @@ export default function App() {
     <>
       <Background />
       <Topbar />
-      <main className='mx-auto flex max-w-400 flex-col items-center justify-start gap-20 p-4 md:gap-40 xl:gap-80'>
+      <main className='mx-auto flex max-w-350 flex-col items-center justify-start gap-20 p-4 md:gap-40 xl:gap-80'>
         <Hero />
         <Projects />
         <About />

@@ -14,10 +14,10 @@ export default function About() {
         <img
           src='/profile2.webp'
           alt='photo'
-          className='border-yellow-dim max-h-100 rounded-md border-4 xl:max-h-150'
+          className='border-yellow-dim max-h-100 rounded-md border-4 xl:max-h-120'
         />
         <div className='flex w-fit flex-col items-center gap-8'>
-          <div className='bg-background-light text-light-dim font-poppins relative rounded-sm p-4 text-sm opacity-80 md:max-w-150 md:text-lg xl:max-w-200 xl:text-xl'>
+          <div className='bg-background-light text-light-dim font-poppins relative rounded-sm p-4 text-sm opacity-80 md:max-w-150 md:text-lg xl:max-w-175 xl:text-xl'>
             <img
               src={quoteIcon}
               alt='quote'
