@@ -12,10 +12,12 @@ export default function App() {
       <Background />
       <Topbar />
       <main className='main-content'>
-        <Hero />
-        <Projects />
-        <About />
-        <Contact />
+        <div className='sections-container'>
+          <Hero />
+          <Projects />
+          <About />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </>

@@ -11,15 +11,15 @@ export default function Hero() {
   };
 
   return (
-    <section className='flex w-full flex-col items-center justify-start gap-6 md:flex-row md:items-center md:justify-around'>
-      <div className='w-full md:w-fit'>
-        <h3 className='text-light-dim text-lg lg:text-xl xl:text-3xl'>
+    <section className='mt-6 flex w-full flex-col items-start justify-start gap-10 sm:mt-25 sm:flex-row sm:items-center sm:justify-around'>
+      <header className='w-full md:w-fit'>
+        <h3 className='text-light-dim text-lg leading-4.5 xl:text-3xl xl:leading-7'>
           Cześć, jestem
         </h3>
-        <h1 className='text-light text-[5rem] font-medium lg:text-8xl xl:my-4 xl:text-9xl'>
+        <h1 className='text-light text-7xl leading-20 font-medium xl:text-9xl xl:leading-32'>
           Marcel.
         </h1>
-        <h2 className='text-light text-4xl font-semibold lg:text-5xl xl:text-7xl'>
+        <h2 className='text-light text-4xl leading-10 font-semibold xl:text-7xl xl:leading-20'>
           Tworzę{' '}
           <span className='text-yellow'>
             strony <br /> internetowe
@@ -28,15 +28,15 @@ export default function Hero() {
         </h2>
         <button
           onClick={() => handleScrollToContact()}
-          className='bg-yellow hover:bg-yellow-dim transition-bg my-4 flex h-15 cursor-pointer items-center justify-center px-4 py-2 text-lg font-semibold duration-200 lg:px-6 lg:py-8 lg:text-xl xl:px-8 xl:py-10 xl:text-2xl'>
+          className='bg-yellow hover:bg-yellow-dim transition-bg my-4 flex h-15 w-44 cursor-pointer items-center justify-center text-lg leading-5 font-semibold duration-200 xl:h-20 xl:w-62 xl:text-2xl'>
           NAPISZ DO MNIE
         </button>
-      </div>
-      <div className='h-full'>
+      </header>
+      <div className='sm:max-w-100 xl:max-w-150'>
         <img
           src='/profile.webp'
           alt='photo'
-          className='border-yellow-dim h-full rounded-md border-4 md:max-h-100 xl:max-h-150'
+          className='border-yellow-dim w-full rounded-lg border-6'
         />
       </div>
     </section>

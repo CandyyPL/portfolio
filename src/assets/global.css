@@ -44,7 +44,11 @@
 
 @layer components {
   .main-content {
-    @apply max-width mx-auto flex flex-col items-center justify-start gap-20 p-4 md:gap-40 xl:gap-80;
+    @apply max-width mx-auto flex flex-col pb-6;
+  }
+
+  .sections-container {
+    @apply flex w-full flex-col items-center justify-start gap-20 sm:gap-50 xl:gap-87.5;
   }
 
   .section-heading {
@@ -64,7 +68,7 @@
   }
 
   .topbar {
-    @apply flex h-18 flex-row items-center justify-end overflow-hidden px-4 md:mb-10 md:h-22 md:px-8 lg:p-14 xl:mb-18;
+    @apply flex h-18 flex-row items-center justify-end overflow-hidden px-4 md:px-8 lg:p-14;
   }
 }
 
@@ -120,5 +124,5 @@
 }
 
 @utility max-width {
-  width: min(90%, 1600px);
+  width: min(90%, 400rem);
 }
