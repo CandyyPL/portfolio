@@ -1,13 +1,13 @@
 export default function ProjectCard() {
   return (
     <li>
-      <article className='bg-background-light flex h-112 w-82 flex-col rounded-md'>
+      <article className='project-card'>
         <img
           src='https://placehold.co/1280x720'
           alt='thumbnail'
-          className='block rounded-t-md'
+          className='block w-full rounded-t-md'
         />
-        <div className='flex h-full flex-col items-center justify-between gap-2 p-4'>
+        <div className='flex min-h-67.5 flex-col justify-center gap-5 px-4'>
           <h1 className='text-light w-full text-2xl font-medium'>
             Example name
           </h1>

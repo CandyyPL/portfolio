@@ -52,7 +52,11 @@
   }
 
   .section-heading {
-    @apply text-light text-4xl font-medium md:text-5xl lg:text-6xl;
+    @apply text-light text-[2rem] font-medium sm:text-[2.375rem] lg:w-3/4 lg:text-[2.625rem] xl:text-[3.125rem];
+  }
+
+  .project-card {
+    @apply bg-background-light flex max-h-162.5 min-h-112.5 max-w-100 min-w-70 flex-col justify-between rounded-md;
   }
 
   .field-wrapper {
@@ -125,4 +129,8 @@
 
 @utility max-width {
   width: min(90%, 400rem);
+}
+
+@utility about-photo-clamp-width {
+  width: clamp(20.3125rem, 27.1875rem, 60%);
 }

@@ -6,17 +6,17 @@ export default function About() {
   return (
     <section
       id={SECTIONS.ABOUT}
-      className='flex w-full flex-col items-center gap-4 md:gap-8 xl:gap-12'>
-      <h1 className='section-heading text-center lg:w-full lg:pr-10 lg:text-end'>
+      className='flex w-full flex-col items-center justify-center gap-15 pt-5'>
+      <h1 className='section-heading text-center lg:text-right'>
         Kilka słów <span className='text-yellow'>o mnie</span>.
       </h1>
-      <div className='flex w-full flex-col items-center gap-8 lg:flex-row lg:justify-around'>
+      <div className='flex flex-col items-center gap-7 lg:flex-row lg:justify-center lg:gap-25'>
         <img
           src='/profile2.webp'
           alt='photo'
-          className='border-yellow-dim max-h-100 rounded-md border-4 xl:max-h-120'
+          className='border-yellow-dim max-h-108.75 w-3/5 max-w-81.25 rounded-md border-4 sm:min-h-108.75 sm:min-w-81.25'
         />
-        <div className='flex w-fit flex-col items-center gap-8'>
+        <div className='flex w-full flex-col gap-8 lg:max-w-187.5 lg:text-left'>
           <div className='bg-background-light text-light-dim font-poppins relative rounded-sm p-4 text-sm opacity-80 md:max-w-150 md:text-lg xl:max-w-175 xl:text-xl'>
             <img
               src={quoteIcon}
@@ -29,7 +29,7 @@ export default function About() {
             </p>
             <p className='w-full text-end'>Konfucjusz</p>
           </div>
-          <p className='text-light px-4 text-center text-lg leading-tight md:max-w-150 md:text-xl xl:max-w-175 xl:text-2xl'>
+          <p className='text-light px-4 text-center text-lg leading-6 lg:text-left xl:text-2xl xl:leading-9'>
             W pełni zgadzam się z tymi słowami. Programowanie to moja pasja,
             którą rozwijam od wielu lat, dlatego postanowiłem uczynić z tego
             swoją ścieżkę zawodową. <br /> <br /> Kodowanie to nie tylko moje
