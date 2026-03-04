@@ -37,7 +37,7 @@ export default function Contact() {
         <img
           src={emailIcon}
           alt='mail'
-          className='max-w-100'
+          className='hidden max-w-100 xl:block'
         />
         <form
           onSubmit={handleSubmit(onSubmit)}
