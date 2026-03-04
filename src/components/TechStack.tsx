@@ -40,21 +40,21 @@ const ICONS = [
 
 export default function TechStack() {
   return (
-    <section className='flex flex-col items-center gap-4 md:gap-8 xl:gap-12'>
+    <section className='flex flex-col items-center justify-center gap-7 xl:gap-10'>
       <h1 className='section-heading text-center'>
         <span className='text-yellow'>Technologie</span> z którymi pracuję.
       </h1>
-      <ul className='mt-4 flex flex-row flex-wrap items-center justify-center gap-8 md:gap-12'>
+      <ul className='mt-4 flex flex-row flex-wrap items-center justify-center gap-5 xl:gap-7'>
         {ICONS.map((icon) => (
           <li
             key={icon.name}
-            className='text-light flex h-18 w-20 flex-col items-center gap-2 font-medium md:w-24 lg:w-30 xl:w-34'>
+            className='text-light flex size-22 flex-col items-center gap-4 font-medium xl:size-32'>
             <img
               src={icon.icon}
               alt={icon.name}
-              className='size-12 md:size-14 lg:size-16 xl:size-18'
+              className='size-12 xl:size-16'
             />
-            <p className='text-sm md:text-base lg:text-xl xl:text-2xl'>
+            <p className='text-sm leading-5 xl:text-xl xl:leading-7'>
               {icon.displayName}
             </p>
           </li>
