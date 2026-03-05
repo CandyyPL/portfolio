@@ -15,7 +15,7 @@ export default function Navigation({ toggleNav }: Props) {
 
     const options: ScrollIntoViewOptions = {
       behavior: 'smooth',
-      block: 'center',
+      block: 'start',
     };
 
     document.getElementById(section)?.scrollIntoView(options);
