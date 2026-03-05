@@ -3,28 +3,50 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import emailIcon from '@/assets/icons/email.png';
+import ContactForm from '@/components/ContactForm.tsx';
+import successIcon from '@/assets/icons/check.png';
+import { Activity, useEffect, useState } from 'react';
+import { TailSpin } from 'react-loader-spinner';
+import { cn } from '@/lib/utils.ts';
 
 const FormDataSchema = z.object({
   email: z.email(),
   message: z.string().min(20).max(400),
 });
 
-type FormData = z.infer<typeof FormDataSchema>;
+export type FormDataType = z.infer<typeof FormDataSchema>;
 
 export default function Contact() {
+  const [overlayActive, setOverlayActive] = useState<boolean>(false);
+
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
     reset,
-  } = useForm<FormData>({
+  } = useForm<FormDataType>({
     resolver: zodResolver(FormDataSchema),
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = handleSubmit(async (data: FormDataType) => {
+    setOverlayActive(true);
+
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     reset();
-  };
+  });
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      const fadeTimer = setTimeout(() => setOverlayActive(false), 3000);
+
+      return () => {
+        clearTimeout(fadeTimer);
+      };
+    }
+  }, [isSubmitting, isSubmitSuccessful]);
+
+  const form = { register, errors };
 
   return (
     <section
@@ -39,39 +61,35 @@ export default function Contact() {
           alt='mail'
           className='hidden max-w-100 xl:block'
         />
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className='bg-light-dim flex w-full max-w-131.25 flex-col items-center gap-7 p-4'>
-          <div className='field-wrapper'>
-            <label
-              htmlFor='email'
-              className='ml-1'>
-              E-mail
-            </label>
-            <input
-              type='text'
-              id='email'
-              className='form-input'
-              {...register('email')}
-            />
-            {errors.email && (
-              <p className='input-error'>Niepoprawny adres e-mail.</p>
-            )}
+        <div className='bg-light-dim relative w-full max-w-131.25 p-4'>
+          <div
+            className={cn(
+              'bg-dark-transparent absolute top-0 left-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4',
+              'transition-opacity duration-200',
+              overlayActive ? 'opacity-100' : 'pointer-events-none opacity-0'
+            )}>
+            <Activity mode={isSubmitting ? 'visible' : 'hidden'}>
+              <TailSpin
+                width='50px'
+                height='50px'
+                color='#C1C3C2'
+              />
+              <p className='text-light text-xl'>Wysyłanie</p>
+            </Activity>
+            <Activity mode={isSubmitSuccessful ? 'visible' : 'hidden'}>
+              <img
+                src={successIcon}
+                alt='success'
+                className='size-20'
+              />
+              <p className='text-light text-xl'>Wiadomość wysłana!</p>
+            </Activity>
           </div>
-          <div className='field-wrapper'>
-            <label htmlFor='message'>Wiadomość</label>
-            <textarea
-              id='message'
-              className='form-input h-50 resize-none'
-              {...register('message')}></textarea>
-            {errors.message && (
-              <p className='input-error'>Wpisz pomiędzy 20 a 400 znaków.</p>
-            )}
-          </div>
-          <button className='bg-yellow hover:bg-yellow-dim transition-bg h-14 w-30 cursor-pointer text-xl font-medium duration-200'>
-            WYŚLIJ
-          </button>
-        </form>
+          <ContactForm
+            form={form}
+            onSubmit={onSubmit}
+          />
+        </div>
       </div>
     </section>
   );

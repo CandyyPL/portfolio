@@ -16,6 +16,7 @@
   --font-poppins: 'Poppins', sans-serif;
 
   --color-dark: hsl(235, 100%, 3%);
+  --color-dark-transparent: rgba(0, 1, 15, 0.75);
   --color-background: hsl(75, 12%, 7%);
   --color-background-light: hsl(70, 6%, 20%);
   --color-light-dim: hsl(160, 2%, 76%);
@@ -68,7 +69,7 @@
   }
 
   .input-error {
-    @apply text-sm text-red-500;
+    @apply text-sm text-red-500 text-shadow-md;
   }
 
   .topbar {
