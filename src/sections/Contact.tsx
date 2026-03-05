@@ -8,6 +8,7 @@ import successIcon from '@/assets/icons/check.png';
 import { Activity, useEffect, useState } from 'react';
 import { TailSpin } from 'react-loader-spinner';
 import { cn } from '@/lib/utils.ts';
+import emailjs from '@emailjs/browser';
 
 const FormDataSchema = z.object({
   email: z.email(),
@@ -31,7 +32,11 @@ export default function Contact() {
   const onSubmit = handleSubmit(async (data: FormDataType) => {
     setOverlayActive(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    await emailjs.send(serviceID, templateID, data, { publicKey });
 
     reset();
   });

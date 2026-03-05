@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@datocms/cda-client": "^0.2.10",
+    "@emailjs/browser": "^4.4.1",
     "@fontsource-variable/outfit": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
     "@hookform/resolvers": "^5.2.2",
