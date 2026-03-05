@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: Props) {
           alt='thumbnail'
           className='block w-full rounded-t-md'
         />
-        <div className='flex min-h-67.5 flex-col justify-center gap-5 px-4'>
+        <div className='flex min-h-67.5 flex-col justify-center gap-4 p-4'>
           <h1 className='text-light w-full text-2xl font-medium'>
             {project.projectname}
           </h1>
