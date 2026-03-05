@@ -3,3 +3,19 @@ export const SECTIONS = {
   ABOUT: 'about',
   CONTACT: 'contact',
 };
+
+export const projectsQuery = `{
+  allProjects {
+    id
+    projectname
+    projectdesc
+    projectthumbnail {
+      url
+    }
+    techlist {
+      id
+      techname
+    }
+    _firstPublishedAt
+  }
+}`;

@@ -2,49 +2,18 @@ import { SECTIONS } from '@/lib/constants.ts';
 import githubIcon from '@/assets/icons/github-mark.png';
 import { queryOptions, useQuery } from '@tanstack/react-query';
 import ProjectsList from '@/components/ProjectsList.tsx';
-
-export type ProjectData = {
-  id: string;
-  title: string;
-  desc: string;
-  thumbnailUrl: string;
-};
-
-type ApiResponse = {
-  data: ProjectData[] | null;
-  error?: Error | null;
-};
-
-const projects: ProjectData[] = [
-  {
-    id: '1',
-    title: 'Example',
-    desc: 'Desc',
-    thumbnailUrl: 'https://placehold.co/1280x720',
-  },
-];
-
-const getProjects = async (fail?: boolean) =>
-  new Promise<ApiResponse>((resolve) => {
-    setTimeout(() => {
-      if (fail) {
-        resolve({ error: new Error('Error'), data: null });
-      } else {
-        resolve({ data: projects });
-      }
-    }, 3000);
-  });
+import { getProjects } from '@/lib/projectsQuery.ts';
 
 const getProjectsQueryOptions = () =>
   queryOptions({
     queryKey: ['projects'],
-    queryFn: () => getProjects(false),
+    queryFn: getProjects,
   });
 
 export default function Projects() {
-  const { data, isPending } = useQuery(getProjectsQueryOptions());
+  const { data, error, isPending } = useQuery(getProjectsQueryOptions());
 
-  const projects = data?.data ?? null;
+  const projects = data?.allProjects ?? null;
 
   return (
     <section
@@ -56,6 +25,7 @@ export default function Projects() {
       <ProjectsList
         projects={projects}
         isLoading={isPending}
+        error={error}
       />
       <button className='bg-yellow text-dark hover:bg-yellow-dim transition-bg px-4 py-2 text-xl duration-200'>
         <a

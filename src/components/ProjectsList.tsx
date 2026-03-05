@@ -1,14 +1,15 @@
 import warningIcon from '@/assets/icons/warning-white.png';
 import { TailSpin } from 'react-loader-spinner';
-import type { ProjectData } from '@/sections/Projects.tsx';
 import ProjectCard from '@/components/ProjectCard.tsx';
+import type { ProjectType } from '@/types/project.ts';
 
 type Props = {
-  projects: ProjectData[] | null;
+  projects: ProjectType[] | null;
   isLoading: boolean;
+  error: Error | null;
 };
 
-export default function ProjectsList({ projects, isLoading }: Props) {
+export default function ProjectsList({ projects, isLoading, error }: Props) {
   return (
     <ul className='flex flex-col items-center gap-8 md:w-full md:flex-row md:flex-wrap md:justify-center'>
       {isLoading ? (
@@ -21,18 +22,25 @@ export default function ProjectsList({ projects, isLoading }: Props) {
           <p className='text-light text-lg'>Ładowanie</p>
         </div>
       ) : projects ? (
-        projects.map((project) => <ProjectCard project={project} />)
-      ) : (
-        <div className='flex min-h-67.5 flex-col items-center justify-center gap-4'>
-          <img
-            src={warningIcon}
-            alt='error'
-            className='size-14 opacity-90'
+        projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
           />
-          <p className='text-light text-center text-lg'>
-            Wystąpił błąd. <br /> Przepraszam za utrudnienia.
-          </p>
-        </div>
+        ))
+      ) : (
+        error && (
+          <div className='flex min-h-67.5 flex-col items-center justify-center gap-4'>
+            <img
+              src={warningIcon}
+              alt='error'
+              className='size-14 opacity-90'
+            />
+            <p className='text-light text-center text-lg'>
+              Wystąpił błąd. <br /> Przepraszam za utrudnienia.
+            </p>
+          </div>
+        )
       )}
     </ul>
   );
