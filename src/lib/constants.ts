@@ -7,6 +7,7 @@ export const SECTIONS = {
 export const projectsQuery = `{
   allProjects {
     id
+    projectslug
     projectname
     projectdesc
     projectthumbnail {

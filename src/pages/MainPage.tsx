@@ -6,7 +6,7 @@ import About from '@/sections/About.tsx';
 import Contact from '@/sections/Contact.tsx';
 import Footer from '@/components/Footer.tsx';
 
-export default function App() {
+export default function MainPage() {
   return (
     <>
       <Background />

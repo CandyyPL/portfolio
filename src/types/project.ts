@@ -7,6 +7,7 @@ export const TechSchema = z.object({
 
 export const ProjectSchema = z.object({
   id: z.string(),
+  projectslug: z.string(),
   projectname: z.string(),
   projectdesc: z.string(),
   projectthumbnail: z.object({

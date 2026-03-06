@@ -1,22 +1,8 @@
 import { SECTIONS } from '@/lib/constants.ts';
 import githubIcon from '@/assets/icons/github-mark.png';
-import { queryOptions, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import ProjectsList from '@/components/ProjectsList.tsx';
-import { getProjects } from '@/lib/projectsQuery.ts';
-import { ApiResponseSchema } from '@/types/project.ts';
-
-const getProjectsQueryOptions = () =>
-  queryOptions({
-    queryKey: ['projects'],
-    queryFn: async () => {
-      const rawData = await getProjects();
-      const validated = ApiResponseSchema.parse(rawData);
-
-      return validated.allProjects.sort(
-        (a, b) => a._firstPublishedAt.getTime() - b._firstPublishedAt.getTime()
-      );
-    },
-  });
+import { getProjectsQueryOptions } from '@/lib/getProjects.ts';
 
 export default function Projects() {
   const { data, error, isPending } = useQuery(getProjectsQueryOptions());

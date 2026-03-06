@@ -22,9 +22,11 @@ export default function ProjectCard({ project }: Props) {
               {project.projectdesc}
             </p>
           </div>
-          <button className='bg-yellow hover:bg-yellow-dim transition-bg text-dark w-full cursor-pointer px-6 py-2 text-lg duration-200'>
-            Czytaj więcej
-          </button>
+          <a href={`/project/${project.projectslug}`}>
+            <button className='bg-yellow hover:bg-yellow-dim transition-bg text-dark w-full cursor-pointer px-6 py-2 text-lg duration-200'>
+              Czytaj więcej
+            </button>
+          </a>
         </div>
       </article>
     </li>
