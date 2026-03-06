@@ -77,6 +77,14 @@
   .topbar {
     @apply flex h-18 flex-row items-center justify-end overflow-hidden px-4 md:px-8 lg:p-14;
   }
+
+  .project-desc-prose {
+    @apply prose prose-neutral prose-headings:text-light prose-strong:text-yellow-dim;
+  }
+
+  .link-button {
+    @apply bg-yellow hover:bg-yellow-dim transition-colors text-dark flex cursor-pointer flex-row items-center gap-2 px-6 py-2 text-lg duration-200;
+  }
 }
 
 @utility hamburger-line {
