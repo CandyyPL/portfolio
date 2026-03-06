@@ -18,7 +18,7 @@ export default function ProjectPage() {
   return (
     <>
       <Background />
-      <main className='main-content items-center p-8'>
+      <main className='main-content items-center p-4 xl:p-8'>
         <section className='flex w-full max-w-300 flex-col items-center gap-4'>
           <Activity mode={isPending && !error ? 'visible' : 'hidden'}>
             <div className='flex h-full w-full flex-col items-center justify-center gap-4'>
