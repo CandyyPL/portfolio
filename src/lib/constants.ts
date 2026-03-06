@@ -7,10 +7,11 @@ export const SECTIONS = {
 export const projectsQuery = `{
   allProjects {
     id
-    projectslug
-    projectname
-    projectdesc
-    projectthumbnail {
+    slug
+    name
+    description
+    longdescription
+    thumbnail {
       url
     }
     techlist {
