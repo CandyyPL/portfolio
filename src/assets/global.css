@@ -83,7 +83,7 @@
   }
 
   .link-button {
-    @apply bg-yellow hover:bg-yellow-dim transition-colors text-dark flex cursor-pointer flex-row items-center gap-2 px-6 py-2 text-lg duration-200;
+    @apply bg-yellow hover:bg-yellow-dim transition-colors text-dark flex cursor-pointer flex-row justify-center items-center gap-2 px-6 py-2 text-lg duration-200;
   }
 }
 

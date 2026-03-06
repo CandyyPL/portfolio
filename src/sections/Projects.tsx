@@ -3,6 +3,7 @@ import githubIcon from '@/assets/icons/github-mark.png';
 import { useQuery } from '@tanstack/react-query';
 import ProjectsList from '@/components/ProjectsList.tsx';
 import { getProjectsQueryOptions } from '@/lib/getProjects.ts';
+import LinkButton from '@/components/LinkButton.tsx';
 
 export default function Projects() {
   const { data, error, isPending } = useQuery(getProjectsQueryOptions());
@@ -21,19 +22,16 @@ export default function Projects() {
         isLoading={isPending}
         error={error}
       />
-      <button className='bg-yellow text-dark hover:bg-yellow-dim transition-bg px-4 py-2 text-xl duration-200'>
-        <a
-          href='https://github.com/CandyyPL'
-          target='_blank'
-          className='flex items-center justify-center gap-4'>
-          <img
-            src={githubIcon}
-            alt='github'
-            className='size-8'
-          />
-          Zobacz więcej
-        </a>
-      </button>
+      <LinkButton
+        url='https://github.com/CandyyPL'
+        buttonStyle='link-button'>
+        <img
+          src={githubIcon}
+          alt='github'
+          className='size-8'
+        />
+        Zobacz więcej
+      </LinkButton>
     </section>
   );
 }

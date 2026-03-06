@@ -49,9 +49,7 @@ export default function ContactForm({ form, onSubmit }: Props) {
           <p className='input-error'>Wpisz pomiędzy 20 a 400 znaków.</p>
         )}
       </div>
-      <button className='bg-yellow hover:bg-yellow-dim transition-bg h-14 w-30 cursor-pointer text-xl font-medium duration-200'>
-        WYŚLIJ
-      </button>
+      <button className='link-button py-4 text-xl font-medium'>WYŚLIJ</button>
     </form>
   );
 }

@@ -1,4 +1,5 @@
 import type { ProjectType } from '@/types/project.ts';
+import LinkButton from '@/components/LinkButton.tsx';
 
 type Props = {
   project: ProjectType;
@@ -22,11 +23,11 @@ export default function ProjectCard({ project }: Props) {
               {project.description}
             </p>
           </div>
-          <a href={`/project/${project.slug}`}>
-            <button className='bg-yellow hover:bg-yellow-dim transition-bg text-dark w-full cursor-pointer px-6 py-2 text-lg duration-200'>
-              Czytaj więcej
-            </button>
-          </a>
+          <LinkButton
+            url={`/project/${project.slug}`}
+            buttonStyle='link-button w-full'>
+            Czytaj więcej
+          </LinkButton>
         </div>
       </article>
     </li>
