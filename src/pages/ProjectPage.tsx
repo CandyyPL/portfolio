@@ -1,5 +1,4 @@
 import Background from '@/components/Background.tsx';
-import Topbar from '@/components/Topbar.tsx';
 import { useParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { getProjectsQueryOptions } from '@/lib/getProjects.ts';
