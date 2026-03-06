@@ -18,6 +18,12 @@ export const projectsQuery = `{
       id
       techname
     }
+    link {
+      url
+    }
+    repo {
+      url
+    }
     _firstPublishedAt
   }
 }`;
