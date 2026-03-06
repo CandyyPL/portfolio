@@ -20,7 +20,7 @@ export default function SingleProject({ project }: Props) {
           <LinkButton
             url='/'
             buttonStyle='link-button'
-            blank={true}>
+            blank={false}>
             Powrót
           </LinkButton>
         </div>
