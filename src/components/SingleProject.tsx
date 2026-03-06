@@ -50,7 +50,7 @@ export default function SingleProject({ project }: Props) {
                     alt='tech-icon'
                     className='size-12'
                   />
-                  <p className='text-light text-lg'>{icon?.displayName}</p>
+                  <p className='text-light sm:text-lg'>{icon?.displayName}</p>
                 </li>
               );
             })}
