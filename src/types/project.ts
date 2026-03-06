@@ -15,6 +15,12 @@ export const ProjectSchema = z.object({
     url: z.string(),
   }),
   techlist: z.array(TechSchema),
+  link: z.object({
+    url: z.string(),
+  }),
+  repo: z.object({
+    url: z.string(),
+  }),
   _firstPublishedAt: z.coerce.date(),
 });
 
