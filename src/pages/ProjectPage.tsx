@@ -1,4 +1,3 @@
-import Background from '@/components/Background.tsx';
 import { useParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { getProjectsQueryOptions } from '@/lib/getProjects.ts';
@@ -17,7 +16,6 @@ export default function ProjectPage() {
 
   return (
     <>
-      <Background />
       <main className='main-content items-center p-4 xl:p-8'>
         <section className='flex w-full max-w-300 flex-col items-center gap-4'>
           <Activity mode={isPending && !error ? 'visible' : 'hidden'}>

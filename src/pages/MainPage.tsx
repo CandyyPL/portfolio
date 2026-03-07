@@ -1,4 +1,3 @@
-import Background from '@/components/Background.tsx';
 import Hero from '@/sections/Hero.tsx';
 import Topbar from '@/components/Topbar.tsx';
 import Projects from '@/sections/Projects.tsx';
@@ -9,7 +8,6 @@ import Footer from '@/components/Footer.tsx';
 export default function MainPage() {
   return (
     <>
-      <Background />
       <Topbar />
       <main className='main-content'>
         <div className='sections-container'>
