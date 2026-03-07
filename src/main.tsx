@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <Background />
-      <Router basename='/portfolio/'>
+      <Router>
         <Routes>
           <Route
             path='/'
