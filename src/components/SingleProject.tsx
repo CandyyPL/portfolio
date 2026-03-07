@@ -18,7 +18,7 @@ export default function SingleProject({ project }: Props) {
         </h1>
         <div className='flex w-full justify-start md:justify-end'>
           <LinkButton
-            url='/'
+            url='/' // TODO: go back to /#projects
             buttonStyle='link-button'
             blank={false}>
             Powrót
