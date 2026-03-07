@@ -2,13 +2,20 @@ import { useParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { getProjectsQueryOptions } from '@/lib/getProjects.ts';
 import { TailSpin } from 'react-loader-spinner';
-import { Activity } from 'react';
+import { Activity, useEffect } from 'react';
 import warningIcon from '@/assets/icons/warning-white.png';
 import SingleProject from '@/components/SingleProject.tsx';
 import Footer from '@/components/Footer.tsx';
+import { usePrevLocation } from '@/hooks/usePrevLocation.ts';
 
 export default function ProjectPage() {
   const { slug } = useParams();
+  const { setPrevLocation } = usePrevLocation();
+
+  useEffect(() => {
+    setPrevLocation('projects');
+    window.scrollTo(0, 0);
+  }, []);
 
   const { data, error, isPending } = useQuery(getProjectsQueryOptions());
 

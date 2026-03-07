@@ -4,18 +4,18 @@ import Projects from '@/sections/Projects.tsx';
 import About from '@/sections/About.tsx';
 import Contact from '@/sections/Contact.tsx';
 import Footer from '@/components/Footer.tsx';
-import { useSearchParams } from 'react-router';
 import { useEffect } from 'react';
+import { usePrevLocation } from '@/hooks/usePrevLocation.ts';
 
 export default function MainPage() {
-  const [params] = useSearchParams();
+  const { prevLocation } = usePrevLocation();
 
   useEffect(() => {
-    const section = params.get('section');
+    console.log(prevLocation);
 
-    if (section) {
+    if (prevLocation === 'projects') {
       setTimeout(() => {
-        const element = document.getElementById(section);
+        const element = document.getElementById(prevLocation);
         element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 300);
     }
