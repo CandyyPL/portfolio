@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react';
+import { Link } from 'react-router';
 
 type Props = {
   url: string;
@@ -16,11 +17,11 @@ export default function LinkButton({
   children,
 }: Props) {
   return (
-    <a
-      href={url}
+    <Link
+      to={url}
       target={blank ? '_blank' : '_self'}
       className={linkStyle}>
       <button className={buttonStyle}>{children}</button>
-    </a>
+    </Link>
   );
 }
