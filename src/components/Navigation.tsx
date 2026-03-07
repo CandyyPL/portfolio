@@ -25,12 +25,12 @@ export default function Navigation({ toggleNav }: Props) {
     <nav className='md:text-light flex flex-col items-center justify-center gap-8 text-3xl md:flex-row md:text-xl'>
       <div
         onClick={() => handleScroll(SECTIONS.PROJECTS)}
-        className='cursor-pointer'>
+        className='hover:text-light-dim cursor-pointer transition-colors duration-200'>
         projekty
       </div>
       <div
         onClick={() => handleScroll(SECTIONS.ABOUT)}
-        className='cursor-pointer'>
+        className='hover:text-light-dim cursor-pointer transition-colors duration-200'>
         o mnie
       </div>
       <div
