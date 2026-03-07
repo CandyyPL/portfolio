@@ -1,3 +1,5 @@
+import profilePhoto from '@/assets/photos/profile.webp';
+
 export default function Hero() {
   const handleScrollToContact = () => {
     const contact = document.getElementById('contact');
@@ -34,7 +36,7 @@ export default function Hero() {
       </header>
       <div className='sm:max-w-100 xl:max-w-150'>
         <img
-          src='/profile.webp'
+          src={profilePhoto}
           alt='photo'
           className='border-yellow-dim w-full rounded-lg border-6'
         />

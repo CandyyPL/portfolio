@@ -1,6 +1,7 @@
 import { SECTIONS } from '@/lib/constants.ts';
 import quoteIcon from '@/assets/icons/quote-white.png';
 import TechStack from '@/components/TechStack.tsx';
+import profilePhoto from '@/assets/photos/profile2.webp';
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
       <div className='flex flex-col items-center gap-7 lg:flex-row lg:justify-center lg:gap-25'>
         <div className='max-h-108.75 w-4/5 max-w-81.25 sm:min-h-108.75 sm:min-w-81.25'>
           <img
-            src='/profile2.webp'
+            src={profilePhoto}
             alt='photo'
             className='border-yellow-dim w-full rounded-md border-4'
           />
