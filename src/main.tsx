@@ -4,7 +4,7 @@ import '@/assets/global.css';
 import MainPage from '@/pages/MainPage.tsx';
 import { QueryClient } from '@tanstack/react-query';
 import { QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { HashRouter as Router, Routes, Route } from 'react-router';
 import ProjectPage from '@/pages/ProjectPage.tsx';
 import Background from '@/components/Background.tsx';
 import PrevLocationProvider from '@/context/PrevLocationProvider.tsx';
