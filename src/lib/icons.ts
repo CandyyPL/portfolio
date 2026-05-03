@@ -1,6 +1,7 @@
 import type { Icon } from '@/types/icon.ts';
 import tsIcon from '@/assets/icons/typescript-plain.svg';
 import reactIcon from '@/assets/icons/react-original.svg';
+import nextjsIcon from '@/assets/icons/nextjs-plain.svg';
 import zustandIcon from '@/assets/icons/zustand-plain.svg';
 import sassIcon from '@/assets/icons/sass-original.svg';
 import tailwindIcon from '@/assets/icons/tailwindcss-original.svg';
@@ -16,6 +17,11 @@ export const ICONS: Icon[] = [
     name: 'react',
     icon: reactIcon,
     displayName: 'React',
+  },
+  {
+    name: 'nextjs',
+    icon: nextjsIcon,
+    displayName: 'Next JS',
   },
   {
     name: 'zustand',
